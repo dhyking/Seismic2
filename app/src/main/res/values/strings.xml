@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Seismic2</string>
+
+    <string name="image_desc">图片描述</string>
+    <string name="crash_err_description">很抱歉，程序出现异常，即将重启</string>
+    <string name="text_success">成功</string>
+    <string name="text_failure">失败</string>
+</resources>

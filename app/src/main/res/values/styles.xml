@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="text_login_normal">
+        <item name="android:textSize">@dimen/x_txt_size_3</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="btn_login_normal">
+        <item name="android:textSize">@dimen/x_txt_size_2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_55">55dp</dimen>
+
+
+    <!-- 所有字体大小 -->
+    <!-- 对应   60PX-->
+    <dimen name="x_txt_size_1">20sp</dimen>
+    <!-- 对应   52PX-->
+    <dimen name="x_txt_size_2">17.3sp</dimen>
+    <!-- 对应   48PX-->
+    <dimen name="x_txt_size_3">16sp</dimen>
+    <!-- 对应   44PX-->
+    <dimen name="x_txt_size_4">14.6sp</dimen>
+    <!-- 对应   40PX-->
+    <dimen name="x_txt_size_5">13.3sp</dimen>
+    <!-- 对应  38 PX-->
+    <dimen name="x_txt_size_6">12.7sp</dimen>
+    <!-- 对应   30PX-->
+    <dimen name="x_txt_size_7">10sp</dimen>
+    <!-- 对应   28PX-->
+    <!-- 对应   24PX-->
+</resources>

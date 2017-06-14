@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+apply plugin: 'me.tatarka.retrolambda' //使用lanbda表达式
+apply plugin: 'com.neenbedankt.android-apt' //apt插件
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.dhy.seismic2"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        greendao{
+            schemaVersion 1
+            targetGenDir 'src/main/java/'
+            daoPackage 'com.dhy.seismic2.daos.dao'
+        }
+    }
+
+    // 注释冲突
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    // 使用Java1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'org.greenrobot:greendao:3.2.0'
+    // add library
+    //内存检测
+    compile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    // RxJava
+    compile 'io.reactivex:rxjava:1.1.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    // Retrofit网络处理
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    // Retrofit的rx解析库
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    // Retrofit的gson库
+    compile 'com.trello:rxlifecycle:1.0'
+    compile 'com.trello:rxlifecycle-components:1.0'
+    //dagger2
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+    compile 'com.google.dagger:dagger:2.0.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:8.0.1'
+    // 标注
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    //视图注入
+    //动态权限
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    //log日志
+    compile 'com.orhanobut:logger:2.1.1'
+
+    //冲突问题
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+    compile files('libs/AMap3DMap_5.0.0_AMapNavi_5.0.1_20170410.jar')
+    compile files('libs/Amap_2DMap_V4.2.0_20170209.jar')
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/AMap_Search_V5.0.0_20170309.jar')
+    compile files('libs/apache-ant-zip.jar')
+    compile files('libs/Msc.jar')
+
+
+}
