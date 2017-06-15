@@ -1,9 +1,9 @@
-package com.dhy.seismic2.dagger.compontent;
+package com.dhy.seismic2.di.compontent;
 
 import android.content.Context;
 
-import com.dhy.seismic2.dagger.module.ApplicationModule;
 import com.dhy.seismic2.daos.dao.DaoSession;
+import com.dhy.seismic2.di.module.ApplicationModule;
 import com.dhy.seismic2.rxbus.RxBus;
 
 import javax.inject.Singleton;

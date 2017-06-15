@@ -2,18 +2,30 @@ package com.dhy.seismic2;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.dhy.seismic2.activity.LoginActivity;
 import com.dhy.seismic2.base.BaseActivity;
 
 public class LauncherActivity extends BaseActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launcher);
+    protected int attachLayoutRes() {
+        return R.layout.activity_launcher;
+    }
+
+    @Override
+    protected void initViews() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void operate() {
         goLogin(this);
+
     }
 
     /**

@@ -53,6 +53,16 @@ public class Constants {
      */
     public final static int MSG_LOCATION_STOP = 2;
 
+    public final static String SAVE_NAME = "name";
+    public final static String SAVE_PASSWORD = "password";
+    public final static String COMMON_ROLE = "普通用户角色";
+    public final static String SERVICE_NAME = "com.dhy.seismic2.service.DataSyncService";
+    public final static String OPEN_SYNC_SERVICE = "开启同步服务";
+    public final static String CLOSE_SYNC_SERVICE = "关闭同步服务";
+
+
+
+
 
 
 

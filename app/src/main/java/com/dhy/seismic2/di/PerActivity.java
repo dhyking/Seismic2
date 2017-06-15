@@ -1,4 +1,4 @@
-package com.dhy.seismic2.dagger;
+package com.dhy.seismic2.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

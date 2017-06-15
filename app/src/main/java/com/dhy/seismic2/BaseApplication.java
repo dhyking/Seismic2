@@ -4,22 +4,21 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.StrictMode;
 
 import com.dhy.seismic2.activity.LoginActivity;
 import com.dhy.seismic2.base.BaseActivity;
-import com.dhy.seismic2.dagger.compontent.ApplicationComponent;
-import com.dhy.seismic2.dagger.compontent.DaggerApplicationComponent;
-import com.dhy.seismic2.dagger.module.ApplicationModule;
 import com.dhy.seismic2.daos.dao.DaoMaster;
 import com.dhy.seismic2.daos.dao.DaoSession;
+import com.dhy.seismic2.di.compontent.ApplicationComponent;
+import com.dhy.seismic2.di.compontent.DaggerApplicationComponent;
+import com.dhy.seismic2.di.module.ApplicationModule;
 import com.dhy.seismic2.rxbus.RxBus;
 import com.dhy.seismic2.utils.ACache;
 import com.dhy.seismic2.widget.GreenDaoContext;
 import com.squareup.leakcanary.LeakCanary;
 
-import org.greenrobot.greendao.database.DatabaseOpenHelper;
+import org.greenrobot.greendao.database.Database;
 
 /**
  * Created by dhy on 2017/6/12.
@@ -27,14 +26,14 @@ import org.greenrobot.greendao.database.DatabaseOpenHelper;
 
 public class BaseApplication extends Application {
     private static BaseApplication instance;
-    private boolean DEVELOPER_MODE = true;  //是否开启StrictMode
-    private DatabaseOpenHelper helper;
-    private SQLiteDatabase db;
+    private boolean DEVELOPER_MODE = false;  //是否开启StrictMode
+    private Database db;
     private DaoMaster daoMaster;
-    private DaoSession daoSession;
+    public DaoSession daoSession;
     private RxBus rxBus = new RxBus();
     private Context context;
     private static ApplicationComponent applicationComponent;
+    private DaoMaster.DevOpenHelper helper;
 
 
     @Override
@@ -57,8 +56,8 @@ public class BaseApplication extends Application {
         context = getApplicationContext();
         instance = this;
         initConfig();
-//        initDatabase();
-//        initInjector();
+        initDatabase();
+        initInjector();
     }
 
     /**
@@ -85,10 +84,11 @@ public class BaseApplication extends Application {
      * 初始化数据库
      */
     private void initDatabase() {
-        helper = new DaoMaster.DevOpenHelper(new GreenDaoContext(this), Constants.Db_Name, null);
-        db = helper.getWritableDatabase();
+        helper = new DaoMaster.DevOpenHelper(new GreenDaoContext(this), Constants.Db_Name);
+        db = helper.getWritableDb();
         daoMaster = new DaoMaster(db);
         daoSession = daoMaster.newSession();
+
     }
 
     /**

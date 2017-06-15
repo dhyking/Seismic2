@@ -1,9 +1,9 @@
-package com.dhy.seismic2.dagger.compontent;
+package com.dhy.seismic2.di.compontent;
 
 import android.app.Activity;
 
-import com.dhy.seismic2.dagger.PerActivity;
-import com.dhy.seismic2.dagger.module.ActivityModule;
+import com.dhy.seismic2.di.PerActivity;
+import com.dhy.seismic2.di.module.ActivityModule;
 
 import dagger.Component;
 

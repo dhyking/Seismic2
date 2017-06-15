@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 
@@ -13,16 +14,40 @@ import com.trello.rxlifecycle.LifecycleTransformer;
 import com.trello.rxlifecycle.components.RxActivity;
 import com.trello.rxlifecycle.components.support.RxFragmentActivity;
 
+import javax.inject.Inject;
+
+import butterknife.ButterKnife;
+
 /**
  * Created by dhy on 2017/6/5.
  */
 
-public class BaseActivity  extends RxFragmentActivity{
+public abstract class BaseActivity<T extends IBasePresenter>   extends RxFragmentActivity implements IBaseView{
     public final static String FINISH_ACTIVITY = "action.finish";
+
+    @Inject protected T mPresenter;
+    protected void preOnCreate(){}
+    protected abstract int attachLayoutRes();
+    protected void initInjector(){}
+    protected abstract void initViews();
+    protected abstract void initData();
+    protected abstract void operate();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        preOnCreate();
         super.onCreate(savedInstanceState);
+        setContentView(attachLayoutRes());
+        ButterKnife.bind(this);
+        initInjector();
+        initReceiver();
+        initViews();
+        initData();
+        operate();
+    }
+
+    private void initReceiver(){
         IntentFilter mIntentFilter = new IntentFilter(FINISH_ACTIVITY);
         this.registerReceiver(mBroadcastReceiver,mIntentFilter);
     }
@@ -36,10 +61,6 @@ public class BaseActivity  extends RxFragmentActivity{
         }
     };
 
-    public <T> LifecycleTransformer<T> bindToLife() {
-        return this.<T>bindToLifecycle();
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -47,4 +68,8 @@ public class BaseActivity  extends RxFragmentActivity{
     }
 
 
+    @Override
+    public LifecycleTransformer bindToLife() {
+        return this.<T>bindToLifecycle();
+    }
 }

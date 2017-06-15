@@ -5,4 +5,8 @@
     <string name="crash_err_description">很抱歉，程序出现异常，即将重启</string>
     <string name="text_success">成功</string>
     <string name="text_failure">失败</string>
+    <string name="text_account_invalid">用户名或密码错误...</string>
+    <string name="text_account_not_use">用户名或密码错误...</string>
+    <string name="text_key_name">name</string>
+    <string name="text_key_password">password</string>
 </resources>

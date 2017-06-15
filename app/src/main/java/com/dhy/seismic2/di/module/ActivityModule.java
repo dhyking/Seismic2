@@ -1,9 +1,8 @@
-package com.dhy.seismic2.dagger.module;
+package com.dhy.seismic2.di.module;
 
 import android.app.Activity;
-import android.hardware.camera2.CameraManager;
 
-import com.dhy.seismic2.dagger.PerActivity;
+import com.dhy.seismic2.di.PerActivity;
 
 import dagger.Module;
 import dagger.Provides;

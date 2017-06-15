@@ -1,6 +1,5 @@
-package com.dhy.seismic2.dagger.module;
+package com.dhy.seismic2.di.module;
 
-import android.app.Application;
 import android.content.Context;
 
 import com.dhy.seismic2.BaseApplication;
