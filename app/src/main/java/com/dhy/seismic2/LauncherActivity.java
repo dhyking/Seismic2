@@ -36,6 +36,6 @@ public class LauncherActivity extends BaseActivity {
         mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         mIntent.setClass(activity, LoginActivity.class);
         activity.startActivity(mIntent);
-
+        finish();
     }
 }

@@ -3,10 +3,37 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#ffffff</color>
     <!--toast-->
     <color name="color_bg_toast">#9C9C9C</color>
     <!--透明-->
     <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white2">#FDFDFE</color>
+    <color name="white2_press">#cfcccc</color>
+    <color name="black">#000000</color>
+
+    <color name="text_synchronous">#aaaaaa</color>
+    <color name="bg_background">#F4F3F2</color>
+    <color name="bar_divider_line">#e0e0e0</color>
+    <color name="rb_text">#00baff</color>
+
+    <color name="bg_gray">#f2f3f4</color>
+    <color name="tag_blue">#00baff</color>
+    <color name="btn_press_color">#f0f0f0</color>
+    <color name="btn_unpress_color">#f6f6f6</color>
+    <color name="text_reply">#cccccc</color>
+    <color name="ui_bar">#565656</color>
+    <color name="myself_text">#808080</color>
+    <color name="myself_btn_press">#02c0f5</color>
+    <color name="myself_btn_normal">#999999</color>
+    <color name="myself_btn_press2">#cccccc</color>
+    <color name="bg_drawer">#e6e6e6</color>
+
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+
+    <color name="drawer_title_text">#666666</color>
+    <color name="bg_line">#E7E7E7</color>
 
 </resources>

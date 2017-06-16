@@ -27,8 +27,8 @@ import org.greenrobot.greendao.database.Database;
 public class BaseApplication extends Application {
     private static BaseApplication instance;
     private boolean DEVELOPER_MODE = false;  //是否开启StrictMode
-    private Database db;
-    private DaoMaster daoMaster;
+    public Database db;
+    public DaoMaster daoMaster;
     public DaoSession daoSession;
     private RxBus rxBus = new RxBus();
     private Context context;

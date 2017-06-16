@@ -1,14 +1,372 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_register"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.dhy.seismic2.activity.RegisterActivity">
+    style="@style/activity_container_style"
+    android:layout_width="300dp"
+    android:background="@color/bg_gray"
+    android:layout_gravity="center"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:background="@color/rb_text">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/textview_title_style_normal"
+            android:text="添加"
+            android:textColor="@color/white2" />
+
+        <ImageView
+            android:id="@+id/dialog_close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_12"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_close_white" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/textview_label_style_normal"
+        android:layout_alignParentLeft="true"
+        android:layout_height="36.0dp"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:text="请完善以下信息"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="姓名 *" />
+
+        <EditText
+            android:id="@+id/user_add_name_et"
+            style="@style/edittext_normal_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:hint="请输入姓名" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/divider_view_style" />
+    <LinearLayout
+        android:id="@+id/ll_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_thirty_six"
+            android:paddingLeft="@dimen/dimen_12"
+            android:paddingRight="@dimen/dimen_12"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textview_label_style_normal"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:text="密码 *"
+                android:id="@+id/textView3"/>
+
+            <EditText
+                android:id="@+id/user_add_pwd_et"
+                style="@style/edittext_normal_style_normal"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:lines="1"
+                android:singleLine="true"
+                android:inputType="numberPassword"
+                android:hint="请输入密码" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/divider_view_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_thirty_six"
+            android:paddingLeft="@dimen/dimen_12"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dimen_12"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+
+            >
+
+            <TextView
+                style="@style/textview_label_style_normal"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:text="确认密码 *" />
+
+            <EditText
+                android:id="@+id/user_add_pwd_et_again"
+                style="@style/edittext_normal_style_normal"
+                android:layout_width="0dp"
+                android:inputType="numberPassword"
+                android:lines="1"
+                android:layout_weight="4"
+                android:hint="再次输入密码" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/divider_view_style" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:orientation="horizontal"
+        android:background="@color/bg_gray"
+        android:layout_weight="1"
+
+        >
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="姓别 *"/>
+        <RadioGroup
+            android:id="@+id/user_add_sex_rg"
+            style="@style/radio_container_style"
+            android:layout_width="0dp"
+            android:layout_weight="4">
+
+            <RadioButton
+                android:id="@+id/user_add_man_rb"
+                style="@style/radio_item_style"
+                android:drawablePadding="2dp"
+                android:minWidth="20dp"
+                android:text="男"/>
+
+            <RadioButton
+                android:id="@+id/user_add_woman_rb"
+                style="@style/radio_item_style"
+                android:drawablePadding="2dp"
+                android:minWidth="20dp"
+                android:layout_marginLeft="@dimen/margin_fourty_four"
+                android:text="女"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:paddingLeft="@dimen/dimen_12"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/dimen_12"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="单位 *" />
+
+        <TextView
+            android:id="@+id/user_add_unit_et"
+            style="@style/edittext_normal_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:singleLine="true"
+            android:lines="1"
+            android:hint="输入所属单位"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/divider_view_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:paddingLeft="@dimen/dimen_12"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/dimen_12"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="专业 *" />
+
+        <EditText
+            android:id="@+id/user_add_major_et"
+            style="@style/edittext_normal_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="输入专业名称"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/divider_view_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="手机号" />
+
+        <EditText
+            android:id="@+id/user_add_number_et"
+            style="@style/edittext_normal_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:lines="1"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:hint="输入手机号码" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/divider_view_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/bg_gray"
+        android:layout_weight="1"
+
+        >
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:text="用户类型 *"/>
+        <RadioGroup
+            android:id="@+id/user_add_type_rg"
+            style="@style/radio_container_style"
+            android:layout_width="0dp"
+            android:layout_weight="4">
+            <RadioButton
+                android:id="@+id/user_add_inside_rb"
+                style="@style/radio_item_style"
+                android:drawablePadding="5dp"
+                android:minWidth="30dp"
+                android:text="@string/user_type_inside"/>
+            <RadioButton
+                android:id="@+id/user_add_outside_rb"
+                style="@style/radio_item_style"
+                android:drawablePadding="5dp"
+                android:minWidth="30dp"
+                android:text="@string/user_type_outside"
+                android:layout_marginLeft="@dimen/dimen_10"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:paddingLeft="@dimen/dimen_12"
+        android:paddingRight="@dimen/dimen_12"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <TextView
+            style="@style/textview_label_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="角色" />
+
+        <EditText
+            android:id="@+id/user_add_role_et"
+            style="@style/edittext_normal_style_normal"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:text="默认角色(无)"
+            android:focusable="false"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_add_footer_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_thirty_six"
+        android:layout_marginTop="@dimen/dimen_12"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        >
+
+        <Button
+            android:id="@+id/user_add_reset_btn"
+            style="@style/button_cancel_style_normal"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="重置"/>
+
+        <Button
+            android:id="@+id/user_add_submit_btn"
+            style="@style/button_submit_style_normal"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="确定"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

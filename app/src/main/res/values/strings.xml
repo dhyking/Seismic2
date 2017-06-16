@@ -6,7 +6,98 @@
     <string name="text_success">成功</string>
     <string name="text_failure">失败</string>
     <string name="text_account_invalid">用户名或密码错误...</string>
-    <string name="text_account_not_use">用户名或密码错误...</string>
+    <string name="text_account_not_use">账户不可用...</string>
     <string name="text_key_name">name</string>
     <string name="text_key_password">password</string>
+    <string name="text_name_or_pwd_null">账号或密码为空</string>
+    <string name="toast_password_diff">密码不一致,请重新输入</string>
+    <string name="toast_phone_invalid">手机号码不合法,请重新输入</string>
+    <string name="toast_content_incomplete">请填写完整信息后提交</string>
+    <string name="toast_account_exist">用户名已存在，请重新输入!(建议:用户名+数字)</string>
+    <string name="toast_account_create_success">用户创建成功</string>
+    <string name="toast_no_role">暂无任何角色</string>
+
+    <string name="toast_location_failure">定位失败</string>
+    <string name="toast_no_group">无小组信息</string>
+
+    <string name="toast_exit_app">再按一下退出程序</string>
+    <string name="toast_no_internet">请检查你的网络连接</string>
+    <string name="toast_down_failure">下载失败!</string>
+
+
+    <array name="main_menu">
+        <item>系统管理</item>
+        <item>信息服务</item>
+        <item>任务管理</item>
+        <item>地图管理</item>
+        <item>数据采集</item>
+        <item>视频会议</item>
+    </array>
+
+    <string-array name="house_type">
+        <item>农村住宅</item>
+        <item>城市住宅</item>
+        <item>学校</item>
+        <item>医院</item>
+        <item>办公楼</item>
+        <item>酒店</item>
+        <item>工厂</item>
+        <item>公共建筑</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="house_struct">
+        <item>钢混</item>
+        <item>设防砖混</item>
+        <item>砖混</item>
+        <item>砖木</item>
+        <item>土木</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="house_level">
+        <item>毁坏</item>
+        <item>严重</item>
+        <item>中等</item>
+        <item>轻微</item>
+        <item>完好</item>
+    </string-array>
+
+    <string name="menber_manage">人员维护</string>
+    <string name="car_manage">车辆管理</string>
+    <string name="resource_manage">物资管理</string>
+    <string name="add">新增</string>
+    <string name="delete">删除</string>
+    <string name="save">归档</string>
+
+    <string name="navigation_back">返回</string>
+    <string name="show_default">默认字符串</string>
+
+    <string name="task_type_msg">消息</string>
+    <string name="task_type_order">指令</string>
+
+    <string name="task_isteam_yes">小组</string>
+    <string name="task_isteam_no">单人</string>
+
+    <string name="user_type_inside">内部员工</string>
+    <string name="user_type_outside">外部员工</string>
+
+    <!--时间选择控件-->
+    <string name="cancel">取消</string>
+    <string name="commit">确定</string>
+    <string name="title">请选择时间</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+    <string name="no_result">没有结果</string>
+    <string name="error_network">网络异常</string>
+    <string name="error_key">错误的key</string>
+    <string name="error_other">其他错误</string>
+
+
+    <string name="title_default">提示</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_submit">确认</string>
 </resources>

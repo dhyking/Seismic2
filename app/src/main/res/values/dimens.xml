@@ -5,15 +5,26 @@
 
     <dimen name="dimen_5">5dp</dimen>
     <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
     <dimen name="dimen_15">15dp</dimen>
     <dimen name="dimen_20">20dp</dimen>
     <dimen name="dimen_25">25dp</dimen>
     <dimen name="dimen_30">30dp</dimen>
     <dimen name="dimen_35">35dp</dimen>
+    <dimen name="margin_thirty_six">36dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
+    <dimen name="layout_height_fourty">40dp</dimen>
+    <dimen name="margin_fourty_four">44dp</dimen>
     <dimen name="dimen_45">45dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
     <dimen name="dimen_55">55dp</dimen>
+
+    <dimen name="text_twenty">20sp</dimen>
+    <dimen name="text_eighteen">18sp</dimen>
+    <dimen name="text_twelve">12sp</dimen>
+    <dimen name="text_sixteen">16sp</dimen>
+    <dimen name="text_fiveteen">15sp</dimen>
+    <dimen name="text_fourteen">14sp</dimen>
 
 
     <!-- 所有字体大小 -->

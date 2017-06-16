@@ -2,6 +2,9 @@ package com.dhy.seismic2.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.dhy.seismic2.BaseApplication;
+
 import java.util.Map;
 import java.util.Set;
 
@@ -22,24 +25,24 @@ public class SpUtil {
     public final static String ROLE_TYPE = "role_type";
 
 
-    private SpUtil(Context context) {
-        sp = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
+    private SpUtil() {
+        sp = BaseApplication.getInstance().getContext().getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
     }
 
-    private SpUtil(Context context, String name) {
-        sp = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+    private SpUtil(String name) {
+        sp = BaseApplication.getInstance().getContext().getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
-    public static SpUtil getInstance(Context context) {
+    public static SpUtil getInstance() {
         if (instance == null) {
-            instance = new SpUtil(context);
+            instance = new SpUtil();
         }
         return instance;
     }
 
-    public static SpUtil getInstance(Context context, String name) {
+    public static SpUtil getInstance(String name) {
         if (instance == null) {
-            instance = new SpUtil(context, name);
+            instance = new SpUtil(name);
         }
         return instance;
     }

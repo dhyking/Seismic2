@@ -4,12 +4,12 @@ import android.Manifest;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,30 +23,26 @@ import com.dhy.seismic2.base.BaseActivity;
 import com.dhy.seismic2.daos.bean.RoleInfoModel;
 import com.dhy.seismic2.daos.bean.UserInfoModel;
 import com.dhy.seismic2.daos.bean.UserRoleModel;
-import com.dhy.seismic2.daos.dao.DaoSession;
 import com.dhy.seismic2.daos.dao.RoleInfoModelDao;
 import com.dhy.seismic2.daos.dao.UserInfoModelDao;
 import com.dhy.seismic2.daos.dao.UserRoleModelDao;
+import com.dhy.seismic2.rxbus.RxBus;
 import com.dhy.seismic2.utils.ACache;
 import com.dhy.seismic2.utils.AssetOrRawHelper;
+import com.dhy.seismic2.utils.LoginUserUtil;
 import com.dhy.seismic2.utils.SpUtil;
 import com.dhy.seismic2.utils.StringUtils;
 import com.dhy.seismic2.utils.ToastUtil;
 import com.orhanobut.logger.Logger;
 import com.tbruyelle.rxpermissions.RxPermissions;
 
-import org.greenrobot.greendao.query.QueryBuilder;
-import org.greenrobot.greendao.query.WhereCondition;
-
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import rx.functions.Action1;
 
 public class LoginActivity extends BaseActivity {
     private final static String[] PERMISSIONS_STR = {Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -160,13 +156,12 @@ public class LoginActivity extends BaseActivity {
         }
         try {
             String dbFile = Constants.Path_Data + "eds.db";
-            boolean isExisted = (boolean) SpUtil.getInstance(BaseApplication.getInstance().
-                    getContext(), SpUtil.PREFERENCE_LOGIN)
+            boolean isExisted = (boolean) SpUtil.getInstance(SpUtil.PREFERENCE_LOGIN)
                     .get(SpUtil.DB_EXIST_STATE, false);
             if (!(new File(dbFile).exists()) || !isExisted) {
                 //判断数据库文件是否存在，若不存在则执行导入，否则直接打开数据库
                 if (isExisted) {
-                    SpUtil.getInstance(BaseApplication.getInstance())
+                    SpUtil.getInstance()
                             .edit()
                             .put(SpUtil.DB_EXIST_STATE, true)
                             .commit();
@@ -224,7 +219,11 @@ public class LoginActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_login:
-                validAccount();
+                if (validAccount()) {
+                    goToNext(MainActivity.class);
+                    this.finish();
+                    LoginUserUtil.saveCurrentUser(userInfoModel);
+                }
                 break;
             case R.id.btn_datasync:
                 if (isServiceWork()) {
@@ -236,6 +235,7 @@ public class LoginActivity extends BaseActivity {
                 }
                 break;
             case R.id.btn_register:
+                goToNext(RegisterActivity.class);
                 break;
         }
     }
@@ -243,9 +243,13 @@ public class LoginActivity extends BaseActivity {
     /**
      * 判断用户是否正常
      */
-    private void validAccount() {
+    private boolean validAccount() {
         String name = mEtName.getText().toString().trim();
         String password = mEtPwd.getText().toString().trim();
+        if (TextUtils.isEmpty(name) || TextUtils.isEmpty(password)) {
+            ToastUtil.getInstance().showToast(R.string.text_name_or_pwd_null);
+            return false;
+        }
         UserInfoModelDao mUserInfoModelDao = BaseApplication.getInstance().daoSession.getUserInfoModelDao();
         mUserInfoModelDao.queryBuilder()
                 .where(UserInfoModelDao.Properties.USERNAME.eq(name), UserInfoModelDao.Properties.PASSWORD.eq(StringUtils.md5(password)))
@@ -257,7 +261,7 @@ public class LoginActivity extends BaseActivity {
                         userInfoModel = mUserInfoModel;
                     }
                 });
-        if (userInfoModel == null) {
+        if (userInfoModel != null) {
             if (userInfoModel.getSTATE() == 1) {
                 UserRoleModelDao mUserRoleModelDao = BaseApplication.getInstance().daoSession.getUserRoleModelDao();
                 UserRoleModel mUserRoleModel = mUserRoleModelDao.queryBuilder().where(UserRoleModelDao.Properties.USERID.eq(userInfoModel.getID())).unique();
@@ -269,29 +273,31 @@ public class LoginActivity extends BaseActivity {
                     RoleInfoModelDao mRoleInfoModelDao = BaseApplication.getInstance().daoSession.getRoleInfoModelDao();
                     RoleInfoModel mRoleInfoModel = mRoleInfoModelDao.queryBuilder().where(RoleInfoModelDao.Properties.ID.eq(roleId)).unique();
                     if (mRoleInfoModel != null) {
-                        SpUtil.getInstance(BaseApplication.getInstance().getContext(), SpUtil.PREFERENCE_LOGIN)
+                        SpUtil.getInstance(SpUtil.PREFERENCE_LOGIN)
                                 .put(SpUtil.ROLE_TYPE, mRoleInfoModel.getROLENAME())
                                 .edit()
                                 .commit();
                     }
                 } else {
-                    SpUtil.getInstance(BaseApplication.getInstance().getContext(), SpUtil.PREFERENCE_LOGIN)
+                    SpUtil.getInstance(SpUtil.PREFERENCE_LOGIN)
                             .put(SpUtil.ROLE_TYPE, Constants.COMMON_ROLE)
                             .edit()
                             .commit();
                 }
+                return true;
             } else {
-                ToastUtil.getInstance().showToast(R.string.text_account_not_use);
+                ToastUtil.getInstance().showToast(R.string.text_account_invalid);
+                return false;
             }
         } else {
-            ToastUtil.getInstance().showToast(R.string.text_account_invalid);
+            ToastUtil.getInstance().showToast(R.string.text_account_not_use);
+            return false;
         }
     }
 
 
     /**
      * 判断某个服务是否正在运行的方法
-     * <p>
      * serviceName 是包名+服务的类名（例如：net.loonggg.testbackstage.TestService）
      *
      * @return true代表正在运行，false代表服务没有正在运行
@@ -312,4 +318,18 @@ public class LoginActivity extends BaseActivity {
         }
         return isWork;
     }
+
+    /**
+     * 跳转到下一页
+     *
+     * @param cls
+     */
+    private void goToNext(Class cls) {
+        Intent intent = new Intent(this, cls);
+        if (cls == RegisterActivity.class) {
+            intent.putExtra("register", true);
+        }
+        startActivity(intent);
+    }
+
 }

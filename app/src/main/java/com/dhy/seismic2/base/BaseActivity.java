@@ -10,6 +10,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 
+import com.iflytek.cloud.thirdparty.T;
 import com.trello.rxlifecycle.LifecycleTransformer;
 import com.trello.rxlifecycle.components.RxActivity;
 import com.trello.rxlifecycle.components.support.RxFragmentActivity;
@@ -22,10 +23,9 @@ import butterknife.ButterKnife;
  * Created by dhy on 2017/6/5.
  */
 
-public abstract class BaseActivity<T extends IBasePresenter>   extends RxFragmentActivity implements IBaseView{
+public abstract class BaseActivity extends RxFragmentActivity{
     public final static String FINISH_ACTIVITY = "action.finish";
 
-    @Inject protected T mPresenter;
     protected void preOnCreate(){}
     protected abstract int attachLayoutRes();
     protected void initInjector(){}
@@ -68,7 +68,6 @@ public abstract class BaseActivity<T extends IBasePresenter>   extends RxFragmen
     }
 
 
-    @Override
     public LifecycleTransformer bindToLife() {
         return this.<T>bindToLifecycle();
     }
