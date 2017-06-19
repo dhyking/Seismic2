@@ -24,15 +24,15 @@ public class SyncDataChangeModelDao extends AbstractDao<SyncDataChangeModel, Str
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, String.class, "Id", true, "ID");
-        public final static Property TableName = new Property(1, String.class, "TableName", false, "TABLE_NAME");
-        public final static Property PrimaryKeyId = new Property(2, String.class, "PrimaryKeyId", false, "PRIMARY_KEY_ID");
-        public final static Property ActionType = new Property(3, String.class, "ActionType", false, "ACTION_TYPE");
-        public final static Property RowData = new Property(4, String.class, "RowData", false, "ROW_DATA");
-        public final static Property CreateId = new Property(5, String.class, "CreateId", false, "CREATE_ID");
-        public final static Property Creator = new Property(6, String.class, "Creator", false, "CREATOR");
-        public final static Property CreatedTime = new Property(7, String.class, "CreatedTime", false, "CREATED_TIME");
-        public final static Property IsFinish = new Property(8, int.class, "IsFinish", false, "IS_FINISH");
+        public final static Property Id = new Property(0, String.class, "Id", true, "Id");
+        public final static Property TableName = new Property(1, String.class, "TableName", false, "TableName");
+        public final static Property PrimaryKeyId = new Property(2, String.class, "PrimaryKeyId", false, "PrimaryKeyId");
+        public final static Property ActionType = new Property(3, String.class, "ActionType", false, "ActionType");
+        public final static Property RowData = new Property(4, String.class, "RowData", false, "RowData");
+        public final static Property CreateId = new Property(5, String.class, "CreateId", false, "CreateId");
+        public final static Property Creator = new Property(6, String.class, "Creator", false, "Creator");
+        public final static Property CreatedTime = new Property(7, String.class, "CreatedTime", false, "CreatedTime");
+        public final static Property IsFinish = new Property(8, int.class, "IsFinish", false, "IsFinish");
     }
 
 
@@ -48,15 +48,15 @@ public class SyncDataChangeModelDao extends AbstractDao<SyncDataChangeModel, Str
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"LocalTableChangedLog\" (" + //
-                "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
-                "\"TABLE_NAME\" TEXT," + // 1: TableName
-                "\"PRIMARY_KEY_ID\" TEXT," + // 2: PrimaryKeyId
-                "\"ACTION_TYPE\" TEXT," + // 3: ActionType
-                "\"ROW_DATA\" TEXT," + // 4: RowData
-                "\"CREATE_ID\" TEXT," + // 5: CreateId
-                "\"CREATOR\" TEXT," + // 6: Creator
-                "\"CREATED_TIME\" TEXT," + // 7: CreatedTime
-                "\"IS_FINISH\" INTEGER NOT NULL );"); // 8: IsFinish
+                "\"Id\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"TableName\" TEXT," + // 1: TableName
+                "\"PrimaryKeyId\" TEXT," + // 2: PrimaryKeyId
+                "\"ActionType\" TEXT," + // 3: ActionType
+                "\"RowData\" TEXT," + // 4: RowData
+                "\"CreateId\" TEXT," + // 5: CreateId
+                "\"Creator\" TEXT," + // 6: Creator
+                "\"CreatedTime\" TEXT," + // 7: CreatedTime
+                "\"IsFinish\" INTEGER NOT NULL );"); // 8: IsFinish
     }
 
     /** Drops the underlying database table. */

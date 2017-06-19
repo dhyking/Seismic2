@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/12.
@@ -11,19 +12,33 @@ import org.greenrobot.greendao.annotation.Generated;
 public class BiaoZhuModel {
     @Id
     public String ID; //ID
+    @Property(nameInDb = "Name")
     public String Name; //标注点名称
+    @Property(nameInDb = "Longitude")
     public double Longitude; //纬度
+    @Property(nameInDb = "Latitude")
     public double Latitude; //经度
+    @Property(nameInDb = "Des")
     public String Des; //详细描述
+    @Property(nameInDb = "PicAddress")
     public String PicAddress; //图片地址
+    @Property(nameInDb = "VideoAddress")
     public String VideoAddress; //视频地址
+    @Property(nameInDb = "AudioAddress")
     public String AudioAddress; //录音地址
+    @Property(nameInDb = "BZMType")
     public String BZMType; //标注点类型
+    @Property(nameInDb = "CreatorId")
     public String CreatorId; //创建人ID
+    @Property(nameInDb = "EventHeadId")
     public String EventHeadId; //事件ID
+    @Property(nameInDb = "CreatorName")
     public String CreatorName; //创建人姓名
+    @Property(nameInDb = "CreateTime")
     public String CreateTime; //创建时间
+    @Property(nameInDb = "MissionCase")
     public String MissionCase; //任务所属事件
+    @Property(nameInDb = "IsUpload")
     public int IsUpload; //是否上传
     @Generated(hash = 1952010446)
     public BiaoZhuModel(String ID, String Name, double Longitude, double Latitude,

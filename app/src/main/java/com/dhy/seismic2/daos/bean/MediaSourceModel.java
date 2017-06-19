@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -26,7 +27,9 @@ public class MediaSourceModel {
     private String INQUIRERID;
     private String INQUIRERNAME;
     private String INQUIRERTIME;
+    @Property(nameInDb = "State")
     private int State;
+    @Property(nameInDb = "EventHeadId")
     private String EventHeadId;
     @Generated(hash = 516795647)
     public MediaSourceModel(String ID, String BELONGTO, String IMAGEURL,

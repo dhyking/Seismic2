@@ -25,19 +25,19 @@ public class SurveyPointModelDao extends AbstractDao<SurveyPointModel, String> {
      */
     public static class Properties {
         public final static Property ID = new Property(0, String.class, "ID", true, "ID");
-        public final static Property Area = new Property(1, String.class, "area", false, "AREA");
-        public final static Property Address = new Property(2, String.class, "address", false, "ADDRESS");
-        public final static Property Longitude = new Property(3, double.class, "longitude", false, "LONGITUDE");
-        public final static Property Latitude = new Property(4, double.class, "latitude", false, "LATITUDE");
-        public final static Property Levels = new Property(5, String.class, "levels", false, "LEVELS");
-        public final static Property Description = new Property(6, String.class, "description", false, "DESCRIPTION");
-        public final static Property BelongTo = new Property(7, String.class, "belongTo", false, "BELONG_TO");
-        public final static Property IsUpload = new Property(8, int.class, "isUpload", false, "IS_UPLOAD");
-        public final static Property State = new Property(9, int.class, "State", false, "STATE");
-        public final static Property CreateTime = new Property(10, String.class, "createTime", false, "CREATE_TIME");
-        public final static Property CreatorId = new Property(11, String.class, "creatorId", false, "CREATOR_ID");
-        public final static Property CreatorName = new Property(12, String.class, "creatorName", false, "CREATOR_NAME");
-        public final static Property EventHeadId = new Property(13, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
+        public final static Property Area = new Property(1, String.class, "area", false, "area");
+        public final static Property Address = new Property(2, String.class, "address", false, "address");
+        public final static Property Longitude = new Property(3, double.class, "longitude", false, "longitude");
+        public final static Property Latitude = new Property(4, double.class, "latitude", false, "latitude");
+        public final static Property Levels = new Property(5, String.class, "levels", false, "levels");
+        public final static Property Description = new Property(6, String.class, "description", false, "description");
+        public final static Property BelongTo = new Property(7, String.class, "belongTo", false, "belongTo");
+        public final static Property IsUpload = new Property(8, int.class, "isUpload", false, "isUpload");
+        public final static Property State = new Property(9, int.class, "State", false, "State");
+        public final static Property CreateTime = new Property(10, String.class, "createTime", false, "createTime");
+        public final static Property CreatorId = new Property(11, String.class, "creatorId", false, "creatorId");
+        public final static Property CreatorName = new Property(12, String.class, "creatorName", false, "creatorName");
+        public final static Property EventHeadId = new Property(13, String.class, "EventHeadId", false, "EventHeadId");
     }
 
 
@@ -54,19 +54,19 @@ public class SurveyPointModelDao extends AbstractDao<SurveyPointModel, String> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"SurveyPoint\" (" + //
                 "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: ID
-                "\"AREA\" TEXT," + // 1: area
-                "\"ADDRESS\" TEXT," + // 2: address
-                "\"LONGITUDE\" REAL NOT NULL ," + // 3: longitude
-                "\"LATITUDE\" REAL NOT NULL ," + // 4: latitude
-                "\"LEVELS\" TEXT," + // 5: levels
-                "\"DESCRIPTION\" TEXT," + // 6: description
-                "\"BELONG_TO\" TEXT," + // 7: belongTo
-                "\"IS_UPLOAD\" INTEGER NOT NULL ," + // 8: isUpload
-                "\"STATE\" INTEGER NOT NULL ," + // 9: State
-                "\"CREATE_TIME\" TEXT," + // 10: createTime
-                "\"CREATOR_ID\" TEXT," + // 11: creatorId
-                "\"CREATOR_NAME\" TEXT," + // 12: creatorName
-                "\"EVENT_HEAD_ID\" TEXT);"); // 13: EventHeadId
+                "\"area\" TEXT," + // 1: area
+                "\"address\" TEXT," + // 2: address
+                "\"longitude\" REAL NOT NULL ," + // 3: longitude
+                "\"latitude\" REAL NOT NULL ," + // 4: latitude
+                "\"levels\" TEXT," + // 5: levels
+                "\"description\" TEXT," + // 6: description
+                "\"belongTo\" TEXT," + // 7: belongTo
+                "\"isUpload\" INTEGER NOT NULL ," + // 8: isUpload
+                "\"State\" INTEGER NOT NULL ," + // 9: State
+                "\"createTime\" TEXT," + // 10: createTime
+                "\"creatorId\" TEXT," + // 11: creatorId
+                "\"creatorName\" TEXT," + // 12: creatorName
+                "\"EventHeadId\" TEXT);"); // 13: EventHeadId
     }
 
     /** Drops the underlying database table. */

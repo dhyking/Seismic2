@@ -2,6 +2,7 @@ package com.dhy.seismic2.daos.bean;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
 import org.json.JSONObject;
 import org.greenrobot.greendao.annotation.Generated;
 
@@ -11,14 +12,23 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity(nameInDb = "LocalTableChangedLog")
 public class SyncDataChangeModel {
     @Id
+    @Property(nameInDb = "Id")
     private String Id;
+    @Property(nameInDb = "TableName")
     private String TableName;
+    @Property(nameInDb = "PrimaryKeyId")
     private String PrimaryKeyId;
+    @Property(nameInDb = "ActionType")
     private String ActionType;
+    @Property(nameInDb = "RowData")
     private String RowData;
+    @Property(nameInDb = "CreateId")
     private String CreateId;
+    @Property(nameInDb = "Creator")
     private String Creator;
+    @Property(nameInDb = "CreatedTime")
     private String CreatedTime;
+    @Property(nameInDb = "IsFinish")
     private int IsFinish;
     @Generated(hash = 1224680840)
     public SyncDataChangeModel(String Id, String TableName, String PrimaryKeyId,
@@ -92,19 +102,4 @@ public class SyncDataChangeModel {
         this.IsFinish = IsFinish;
     }
 
-//    public SyncDataChangeModel(JSONObject object){
-//        try{
-//            this.id = object.getString("LocalLogId");
-//            this.tableName = object.getString("TableName");
-//            this.primaryKeyId = object.getString("PrimaryKeyId");
-//            this.actionType = object.getString("ActionType");
-//            this.rowData = object.getString("RowData");
-//            this.createId = object.getString("CreateId");
-//            this.creator = object.getString("Creator");
-//            this.createdTime = object.getString("CreatedTime");
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//
-//    }
 }

@@ -24,13 +24,13 @@ public class PersonLocationDao extends AbstractDao<PersonLocation, String> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, String.class, "Id", true, "ID");
-        public final static Property UserId = new Property(1, String.class, "UserId", false, "USER_ID");
-        public final static Property CreatedTime = new Property(2, String.class, "CreatedTime", false, "CREATED_TIME");
-        public final static Property Address = new Property(3, String.class, "Address", false, "ADDRESS");
+        public final static Property Id = new Property(0, String.class, "Id", true, "Id");
+        public final static Property UserId = new Property(1, String.class, "UserId", false, "UserId");
+        public final static Property CreatedTime = new Property(2, String.class, "CreatedTime", false, "CreatedTime");
+        public final static Property Address = new Property(3, String.class, "Address", false, "Address");
         public final static Property X = new Property(4, double.class, "X", false, "X");
         public final static Property Y = new Property(5, double.class, "Y", false, "Y");
-        public final static Property EventHeadId = new Property(6, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
+        public final static Property EventHeadId = new Property(6, String.class, "EventHeadId", false, "EventHeadId");
     }
 
 
@@ -46,13 +46,13 @@ public class PersonLocationDao extends AbstractDao<PersonLocation, String> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"PersonLocation\" (" + //
-                "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
-                "\"USER_ID\" TEXT," + // 1: UserId
-                "\"CREATED_TIME\" TEXT," + // 2: CreatedTime
-                "\"ADDRESS\" TEXT," + // 3: Address
+                "\"Id\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"UserId\" TEXT," + // 1: UserId
+                "\"CreatedTime\" TEXT," + // 2: CreatedTime
+                "\"Address\" TEXT," + // 3: Address
                 "\"X\" REAL NOT NULL ," + // 4: X
                 "\"Y\" REAL NOT NULL ," + // 5: Y
-                "\"EVENT_HEAD_ID\" TEXT);"); // 6: EventHeadId
+                "\"EventHeadId\" TEXT);"); // 6: EventHeadId
     }
 
     /** Drops the underlying database table. */

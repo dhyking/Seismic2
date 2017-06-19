@@ -10,7 +10,8 @@ import java.util.UUID;
  */
 
 public class SyncDataSaveUtil {
-    public static void SyncDataSaveUtil(DaoSession db, String actionType, String createTime, String createId, String creator, String primaryKey, String tableName, String rowData)throws Exception{
+    public static void SyncDataSaveUtil(DaoSession db, String actionType, String createTime, String createId, String creator,
+                                        String primaryKey, String tableName, String rowData)throws Exception{
         //生成待同步记录
         SyncDataChangeModel modelData = new SyncDataChangeModel();
         modelData.setId(UUID.randomUUID().toString());
@@ -24,4 +25,7 @@ public class SyncDataSaveUtil {
         modelData.setRowData(rowData);
         db.getSyncDataChangeModelDao().save(modelData);
     }
+
+
+
 }

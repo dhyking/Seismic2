@@ -40,8 +40,8 @@ public class MediaSourceModelDao extends AbstractDao<MediaSourceModel, String> {
         public final static Property INQUIRERID = new Property(13, String.class, "INQUIRERID", false, "INQUIRERID");
         public final static Property INQUIRERNAME = new Property(14, String.class, "INQUIRERNAME", false, "INQUIRERNAME");
         public final static Property INQUIRERTIME = new Property(15, String.class, "INQUIRERTIME", false, "INQUIRERTIME");
-        public final static Property State = new Property(16, int.class, "State", false, "STATE");
-        public final static Property EventHeadId = new Property(17, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
+        public final static Property State = new Property(16, int.class, "State", false, "State");
+        public final static Property EventHeadId = new Property(17, String.class, "EventHeadId", false, "EventHeadId");
     }
 
 
@@ -73,8 +73,8 @@ public class MediaSourceModelDao extends AbstractDao<MediaSourceModel, String> {
                 "\"INQUIRERID\" TEXT," + // 13: INQUIRERID
                 "\"INQUIRERNAME\" TEXT," + // 14: INQUIRERNAME
                 "\"INQUIRERTIME\" TEXT," + // 15: INQUIRERTIME
-                "\"STATE\" INTEGER NOT NULL ," + // 16: State
-                "\"EVENT_HEAD_ID\" TEXT);"); // 17: EventHeadId
+                "\"State\" INTEGER NOT NULL ," + // 16: State
+                "\"EventHeadId\" TEXT);"); // 17: EventHeadId
     }
 
     /** Drops the underlying database table. */

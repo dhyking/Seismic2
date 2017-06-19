@@ -24,9 +24,9 @@ public class LocalWaitMediaModelDao extends AbstractDao<LocalWaitMediaModel, Str
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property FilePath = new Property(0, String.class, "FilePath", true, "FILE_PATH");
-        public final static Property SyncType = new Property(1, int.class, "SyncType", false, "SYNC_TYPE");
-        public final static Property IsFinish = new Property(2, int.class, "IsFinish", false, "IS_FINISH");
+        public final static Property FilePath = new Property(0, String.class, "FilePath", true, "FilePath");
+        public final static Property SyncType = new Property(1, int.class, "SyncType", false, "SyncType");
+        public final static Property IsFinish = new Property(2, int.class, "IsFinish", false, "IsFinish");
     }
 
 
@@ -42,9 +42,9 @@ public class LocalWaitMediaModelDao extends AbstractDao<LocalWaitMediaModel, Str
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"LocalWaitSyncMediaFile\" (" + //
-                "\"FILE_PATH\" TEXT PRIMARY KEY NOT NULL ," + // 0: FilePath
-                "\"SYNC_TYPE\" INTEGER NOT NULL ," + // 1: SyncType
-                "\"IS_FINISH\" INTEGER NOT NULL );"); // 2: IsFinish
+                "\"FilePath\" TEXT PRIMARY KEY NOT NULL ," + // 0: FilePath
+                "\"SyncType\" INTEGER NOT NULL ," + // 1: SyncType
+                "\"IsFinish\" INTEGER NOT NULL );"); // 2: IsFinish
     }
 
     /** Drops the underlying database table. */

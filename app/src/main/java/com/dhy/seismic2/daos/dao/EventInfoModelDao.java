@@ -30,13 +30,13 @@ public class EventInfoModelDao extends AbstractDao<EventInfoModel, String> {
         public final static Property X = new Property(3, double.class, "X", false, "X");
         public final static Property Y = new Property(4, double.class, "Y", false, "Y");
         public final static Property RANGE = new Property(5, float.class, "RANGE", false, "RANGE");
-        public final static Property XYCollection = new Property(6, String.class, "XYCollection", false, "XYCOLLECTION");
+        public final static Property XYCollection = new Property(6, String.class, "XYCollection", false, "XYCollection");
         public final static Property EVENTTIME = new Property(7, String.class, "EVENTTIME", false, "EVENTTIME");
         public final static Property STATE = new Property(8, int.class, "STATE", false, "STATE");
-        public final static Property EventCode = new Property(9, String.class, "EventCode", false, "EVENT_CODE");
-        public final static Property EQEventResCode = new Property(10, String.class, "EQEventResCode", false, "EQEVENT_RES_CODE");
-        public final static Property Addr = new Property(11, String.class, "Addr", false, "ADDR");
-        public final static Property Magnitude = new Property(12, String.class, "Magnitude", false, "MAGNITUDE");
+        public final static Property EventCode = new Property(9, String.class, "EventCode", false, "EventCode");
+        public final static Property EQEventResCode = new Property(10, String.class, "EQEventResCode", false, "EQEventResCode");
+        public final static Property Addr = new Property(11, String.class, "Addr", false, "Addr");
+        public final static Property Magnitude = new Property(12, String.class, "Magnitude", false, "Magnitude");
         public final static Property CREATETIME = new Property(13, String.class, "CREATETIME", false, "CREATETIME");
         public final static Property CREATEID = new Property(14, String.class, "CREATEID", false, "CREATEID");
         public final static Property CREATOR = new Property(15, String.class, "CREATOR", false, "CREATOR");
@@ -61,13 +61,13 @@ public class EventInfoModelDao extends AbstractDao<EventInfoModel, String> {
                 "\"X\" REAL NOT NULL ," + // 3: X
                 "\"Y\" REAL NOT NULL ," + // 4: Y
                 "\"RANGE\" REAL NOT NULL ," + // 5: RANGE
-                "\"XYCOLLECTION\" TEXT," + // 6: XYCollection
+                "\"XYCollection\" TEXT," + // 6: XYCollection
                 "\"EVENTTIME\" TEXT," + // 7: EVENTTIME
                 "\"STATE\" INTEGER NOT NULL ," + // 8: STATE
-                "\"EVENT_CODE\" TEXT," + // 9: EventCode
-                "\"EQEVENT_RES_CODE\" TEXT," + // 10: EQEventResCode
-                "\"ADDR\" TEXT," + // 11: Addr
-                "\"MAGNITUDE\" TEXT," + // 12: Magnitude
+                "\"EventCode\" TEXT," + // 9: EventCode
+                "\"EQEventResCode\" TEXT," + // 10: EQEventResCode
+                "\"Addr\" TEXT," + // 11: Addr
+                "\"Magnitude\" TEXT," + // 12: Magnitude
                 "\"CREATETIME\" TEXT," + // 13: CREATETIME
                 "\"CREATEID\" TEXT," + // 14: CREATEID
                 "\"CREATOR\" TEXT);"); // 15: CREATOR

@@ -24,15 +24,15 @@ public class ICQMessageDao extends AbstractDao<ICQMessage, Integer> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, int.class, "Id", true, "ID");
-        public final static Property SenderId = new Property(1, String.class, "SenderId", false, "SENDER_ID");
-        public final static Property ReceiverType = new Property(2, int.class, "ReceiverType", false, "RECEIVER_TYPE");
-        public final static Property ReceiverId = new Property(3, String.class, "ReceiverId", false, "RECEIVER_ID");
-        public final static Property MsgType = new Property(4, int.class, "MsgType", false, "MSG_TYPE");
-        public final static Property Content = new Property(5, String.class, "Content", false, "CONTENT");
-        public final static Property CreatedTime = new Property(6, String.class, "CreatedTime", false, "CREATED_TIME");
-        public final static Property IsFinish = new Property(7, int.class, "IsFinish", false, "IS_FINISH");
-        public final static Property FileName = new Property(8, String.class, "FileName", false, "FILE_NAME");
+        public final static Property Id = new Property(0, int.class, "Id", true, "Id");
+        public final static Property SenderId = new Property(1, String.class, "SenderId", false, "SenderId");
+        public final static Property ReceiverType = new Property(2, int.class, "ReceiverType", false, "ReceiverType");
+        public final static Property ReceiverId = new Property(3, String.class, "ReceiverId", false, "ReceiverId");
+        public final static Property MsgType = new Property(4, int.class, "MsgType", false, "MsgType");
+        public final static Property Content = new Property(5, String.class, "Content", false, "Content");
+        public final static Property CreatedTime = new Property(6, String.class, "CreatedTime", false, "CreatedTime");
+        public final static Property IsFinish = new Property(7, int.class, "IsFinish", false, "IsFinish");
+        public final static Property FileName = new Property(8, String.class, "FileName", false, "FileName");
     }
 
 
@@ -48,15 +48,15 @@ public class ICQMessageDao extends AbstractDao<ICQMessage, Integer> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"ICQMessage\" (" + //
-                "\"ID\" INTEGER PRIMARY KEY NOT NULL ," + // 0: Id
-                "\"SENDER_ID\" TEXT," + // 1: SenderId
-                "\"RECEIVER_TYPE\" INTEGER NOT NULL ," + // 2: ReceiverType
-                "\"RECEIVER_ID\" TEXT," + // 3: ReceiverId
-                "\"MSG_TYPE\" INTEGER NOT NULL ," + // 4: MsgType
-                "\"CONTENT\" TEXT," + // 5: Content
-                "\"CREATED_TIME\" TEXT," + // 6: CreatedTime
-                "\"IS_FINISH\" INTEGER NOT NULL ," + // 7: IsFinish
-                "\"FILE_NAME\" TEXT);"); // 8: FileName
+                "\"Id\" INTEGER PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"SenderId\" TEXT," + // 1: SenderId
+                "\"ReceiverType\" INTEGER NOT NULL ," + // 2: ReceiverType
+                "\"ReceiverId\" TEXT," + // 3: ReceiverId
+                "\"MsgType\" INTEGER NOT NULL ," + // 4: MsgType
+                "\"Content\" TEXT," + // 5: Content
+                "\"CreatedTime\" TEXT," + // 6: CreatedTime
+                "\"IsFinish\" INTEGER NOT NULL ," + // 7: IsFinish
+                "\"FileName\" TEXT);"); // 8: FileName
     }
 
     /** Drops the underlying database table. */

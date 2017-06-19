@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/12.
@@ -16,12 +17,17 @@ public class EventInfoModel {
     private double X;
     private double Y;
     private float RANGE;
+    @Property(nameInDb = "XYCollection")
     private String XYCollection;
     private String EVENTTIME;
     private int STATE;
+    @Property(nameInDb = "EventCode")
     private String EventCode;
+    @Property(nameInDb = "EQEventResCode")
     private String EQEventResCode;
+    @Property(nameInDb = "Addr")
     private String Addr;
+    @Property(nameInDb = "Magnitude")
     private String Magnitude;
     private String CREATETIME;
     private String CREATEID;

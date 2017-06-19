@@ -24,10 +24,10 @@ public class Files12322DirDao extends AbstractDao<Files12322Dir, String> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, String.class, "Id", true, "ID");
-        public final static Property Name = new Property(1, String.class, "Name", false, "NAME");
-        public final static Property Code = new Property(2, String.class, "Code", false, "CODE");
-        public final static Property ParentID = new Property(3, String.class, "ParentID", false, "PARENT_ID");
+        public final static Property Id = new Property(0, String.class, "Id", true, "Id");
+        public final static Property Name = new Property(1, String.class, "Name", false, "Name");
+        public final static Property Code = new Property(2, String.class, "Code", false, "Code");
+        public final static Property ParentID = new Property(3, String.class, "ParentID", false, "ParentID");
     }
 
 
@@ -43,10 +43,10 @@ public class Files12322DirDao extends AbstractDao<Files12322Dir, String> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"Files12322Dir\" (" + //
-                "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
-                "\"NAME\" TEXT," + // 1: Name
-                "\"CODE\" TEXT," + // 2: Code
-                "\"PARENT_ID\" TEXT);"); // 3: ParentID
+                "\"Id\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"Name\" TEXT," + // 1: Name
+                "\"Code\" TEXT," + // 2: Code
+                "\"ParentID\" TEXT);"); // 3: ParentID
     }
 
     /** Drops the underlying database table. */

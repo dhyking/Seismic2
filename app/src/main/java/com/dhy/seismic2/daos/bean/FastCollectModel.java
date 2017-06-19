@@ -5,6 +5,7 @@ import android.database.Cursor;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -13,15 +14,25 @@ import org.greenrobot.greendao.annotation.Generated;
 public class FastCollectModel {
     @Id
     private String ID;
+    @Property(nameInDb = "Longitude")
     private double Longitude;
+    @Property(nameInDb = "Latitude")
     private double Latitude;
+    @Property(nameInDb = "Address")
     private String Address;
+    @Property(nameInDb = "CreatorId")
     private String CreatorId;
+    @Property(nameInDb = "CreatorName")
     private String CreatorName;
+    @Property(nameInDb = "CreateTime")
     private String CreateTime;
+    @Property(nameInDb = "IsUpload")
     private int IsUpload;
+    @Property(nameInDb = "PublicType")
     private int PublicType;
+    @Property(nameInDb = "Description")
     private String Description;
+    @Property(nameInDb = "EventHeadId")
     private String EventHeadId;
     @Generated(hash = 702473006)
     public FastCollectModel(String ID, double Longitude, double Latitude, String Address,

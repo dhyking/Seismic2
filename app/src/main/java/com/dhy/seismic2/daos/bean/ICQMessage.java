@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -10,14 +11,23 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity(nameInDb = "ICQMessage")
 public class ICQMessage {
     @Id
+    @Property(nameInDb = "Id")
     private int Id;
+    @Property(nameInDb = "SenderId")
     private String SenderId;
+    @Property(nameInDb = "ReceiverType")
     private int ReceiverType;
+    @Property(nameInDb = "ReceiverId")
     private String ReceiverId;
+    @Property(nameInDb = "MsgType")
     private int MsgType;
+    @Property(nameInDb = "Content")
     private String Content;
+    @Property(nameInDb = "CreatedTime")
     private String CreatedTime;
+    @Property(nameInDb = "IsFinish")
     private int IsFinish;
+    @Property(nameInDb = "FileName")
     private String FileName;
     @Generated(hash = 1929208155)
     public ICQMessage(int Id, String SenderId, int ReceiverType, String ReceiverId,

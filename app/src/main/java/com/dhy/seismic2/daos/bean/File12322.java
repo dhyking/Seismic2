@@ -4,6 +4,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -11,9 +12,13 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity(nameInDb = "Files12322")
 public class File12322 {
     @Id
+    @Property(nameInDb = "Id")
     private String Id ;
+    @Property(nameInDb = "FilePath")
     private String FilePath;
+    @Property(nameInDb = "ResCode")
     private String ResCode;
+    @Property(nameInDb = "ResName")
     private String ResName;
     @Generated(hash = 1421562046)
     public File12322(String Id, String FilePath, String ResCode, String ResName) {

@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -11,24 +12,43 @@ import org.greenrobot.greendao.annotation.Generated;
 public class HouseSingleModel {
     @Id
     private String ID;
+    @Property(nameInDb = "belongTo")
     private String belongTo;
+    @Property(nameInDb = "area")
     private String area;
+    @Property(nameInDb = "address")
     private String address;
+    @Property(nameInDb = "longitude")
     private double longitude;
+    @Property(nameInDb = "latitude")
     private double latitude;
+    @Property(nameInDb = "type")
     private String type;
+    @Property(nameInDb = "struct")
     private String struct;
+    @Property(nameInDb = "levels")
     private String levels;
+    @Property(nameInDb = "acreage")
     private float acreage;
+    @Property(nameInDb = "count")
     private int count;
+    @Property(nameInDb = "per")
     private float per;
+    @Property(nameInDb = "total")
     private float total;
+    @Property(nameInDb = "description")
     private String description;
+    @Property(nameInDb = "isUpload")
     private int isUpload;
+    @Property(nameInDb = "State")
     private int State;
+    @Property(nameInDb = "EventHeadId")
     private String EventHeadId;
+    @Property(nameInDb = "inquirerId")
     private String inquirerId;
+    @Property(nameInDb = "inquirerName")
     private String inquirerName;
+    @Property(nameInDb = "inquirerTime")
     private String inquirerTime;
     @Generated(hash = 1023098512)
     public HouseSingleModel(String ID, String belongTo, String area, String address,

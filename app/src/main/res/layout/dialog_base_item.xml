@@ -4,14 +4,15 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@drawable/shape_base_dialog"
-              android:padding="@dimen/dimen_12"
+              android:layout_margin="@dimen/dimen_30"
               android:id="@+id/dialog_rl_bg"
     >
     <RelativeLayout
         android:id="@+id/dialog_head"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_fourty_four"
-        android:background="@color/rb_text">
+        android:background="@drawable/shape_dialog_title"
+        >
         <TextView
             android:id="@+id/dialog_base_top_title"
             android:layout_width="wrap_content"
@@ -29,6 +30,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dimen_5"
+            android:clickable="true"
             />
     </RelativeLayout>
 
@@ -47,9 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_35"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/dimen_5"
-        android:layout_marginLeft="@dimen/dimen_5"
-        android:layout_marginRight="@dimen/dimen_5"
+        android:layout_margin="@dimen/dimen_5"
         android:layout_below="@+id/dialog_base_content"
         >
         <Button

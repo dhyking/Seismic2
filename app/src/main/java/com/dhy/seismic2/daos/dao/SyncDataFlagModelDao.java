@@ -24,7 +24,7 @@ public class SyncDataFlagModelDao extends AbstractDao<SyncDataFlagModel, Integer
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, int.class, "Id", true, "ID");
+        public final static Property Id = new Property(0, int.class, "Id", true, "Id");
         public final static Property EVENTIDS = new Property(1, String.class, "EVENTIDS", false, "EVENTIDS");
     }
 
@@ -41,7 +41,7 @@ public class SyncDataFlagModelDao extends AbstractDao<SyncDataFlagModel, Integer
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"LocalSyncDataFlag\" (" + //
-                "\"ID\" INTEGER PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"Id\" INTEGER PRIMARY KEY NOT NULL ," + // 0: Id
                 "\"EVENTIDS\" TEXT);"); // 1: EVENTIDS
     }
 

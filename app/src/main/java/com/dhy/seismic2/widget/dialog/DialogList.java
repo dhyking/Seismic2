@@ -39,7 +39,7 @@ public class DialogList extends DialogBase implements AdapterView.OnItemClickLis
         mListView = (ListView) view.findViewById(R.id.dialog_list_view);
         adapter = new CompanyListAdapter(mActivity,dataList);
         mListView.setAdapter(adapter);
-        mListView.setDividerHeight(DensityUtil.dp2px(mActivity,1));
+        mListView.setDividerHeight(DensityUtil.dp2px(mActivity,0.5f));
         mListView.setOnItemClickListener(this);
         getContentLay().addView(view);
     }
@@ -58,6 +58,7 @@ public class DialogList extends DialogBase implements AdapterView.OnItemClickLis
         String data = (String) adapter.getItem(position);
         if (mBackDataListener != null) {
             mBackDataListener.onCallback(data);
+            this.dismiss();
         }
 
     }

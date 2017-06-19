@@ -25,25 +25,25 @@ public class HouseSingleModelDao extends AbstractDao<HouseSingleModel, String> {
      */
     public static class Properties {
         public final static Property ID = new Property(0, String.class, "ID", true, "ID");
-        public final static Property BelongTo = new Property(1, String.class, "belongTo", false, "BELONG_TO");
-        public final static Property Area = new Property(2, String.class, "area", false, "AREA");
-        public final static Property Address = new Property(3, String.class, "address", false, "ADDRESS");
-        public final static Property Longitude = new Property(4, double.class, "longitude", false, "LONGITUDE");
-        public final static Property Latitude = new Property(5, double.class, "latitude", false, "LATITUDE");
-        public final static Property Type = new Property(6, String.class, "type", false, "TYPE");
-        public final static Property Struct = new Property(7, String.class, "struct", false, "STRUCT");
-        public final static Property Levels = new Property(8, String.class, "levels", false, "LEVELS");
-        public final static Property Acreage = new Property(9, float.class, "acreage", false, "ACREAGE");
-        public final static Property Count = new Property(10, int.class, "count", false, "COUNT");
-        public final static Property Per = new Property(11, float.class, "per", false, "PER");
-        public final static Property Total = new Property(12, float.class, "total", false, "TOTAL");
-        public final static Property Description = new Property(13, String.class, "description", false, "DESCRIPTION");
-        public final static Property IsUpload = new Property(14, int.class, "isUpload", false, "IS_UPLOAD");
-        public final static Property State = new Property(15, int.class, "State", false, "STATE");
-        public final static Property EventHeadId = new Property(16, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
-        public final static Property InquirerId = new Property(17, String.class, "inquirerId", false, "INQUIRER_ID");
-        public final static Property InquirerName = new Property(18, String.class, "inquirerName", false, "INQUIRER_NAME");
-        public final static Property InquirerTime = new Property(19, String.class, "inquirerTime", false, "INQUIRER_TIME");
+        public final static Property BelongTo = new Property(1, String.class, "belongTo", false, "belongTo");
+        public final static Property Area = new Property(2, String.class, "area", false, "area");
+        public final static Property Address = new Property(3, String.class, "address", false, "address");
+        public final static Property Longitude = new Property(4, double.class, "longitude", false, "longitude");
+        public final static Property Latitude = new Property(5, double.class, "latitude", false, "latitude");
+        public final static Property Type = new Property(6, String.class, "type", false, "type");
+        public final static Property Struct = new Property(7, String.class, "struct", false, "struct");
+        public final static Property Levels = new Property(8, String.class, "levels", false, "levels");
+        public final static Property Acreage = new Property(9, float.class, "acreage", false, "acreage");
+        public final static Property Count = new Property(10, int.class, "count", false, "count");
+        public final static Property Per = new Property(11, float.class, "per", false, "per");
+        public final static Property Total = new Property(12, float.class, "total", false, "total");
+        public final static Property Description = new Property(13, String.class, "description", false, "description");
+        public final static Property IsUpload = new Property(14, int.class, "isUpload", false, "isUpload");
+        public final static Property State = new Property(15, int.class, "State", false, "State");
+        public final static Property EventHeadId = new Property(16, String.class, "EventHeadId", false, "EventHeadId");
+        public final static Property InquirerId = new Property(17, String.class, "inquirerId", false, "inquirerId");
+        public final static Property InquirerName = new Property(18, String.class, "inquirerName", false, "inquirerName");
+        public final static Property InquirerTime = new Property(19, String.class, "inquirerTime", false, "inquirerTime");
     }
 
 
@@ -60,25 +60,25 @@ public class HouseSingleModelDao extends AbstractDao<HouseSingleModel, String> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"HouseSingle\" (" + //
                 "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: ID
-                "\"BELONG_TO\" TEXT," + // 1: belongTo
-                "\"AREA\" TEXT," + // 2: area
-                "\"ADDRESS\" TEXT," + // 3: address
-                "\"LONGITUDE\" REAL NOT NULL ," + // 4: longitude
-                "\"LATITUDE\" REAL NOT NULL ," + // 5: latitude
-                "\"TYPE\" TEXT," + // 6: type
-                "\"STRUCT\" TEXT," + // 7: struct
-                "\"LEVELS\" TEXT," + // 8: levels
-                "\"ACREAGE\" REAL NOT NULL ," + // 9: acreage
-                "\"COUNT\" INTEGER NOT NULL ," + // 10: count
-                "\"PER\" REAL NOT NULL ," + // 11: per
-                "\"TOTAL\" REAL NOT NULL ," + // 12: total
-                "\"DESCRIPTION\" TEXT," + // 13: description
-                "\"IS_UPLOAD\" INTEGER NOT NULL ," + // 14: isUpload
-                "\"STATE\" INTEGER NOT NULL ," + // 15: State
-                "\"EVENT_HEAD_ID\" TEXT," + // 16: EventHeadId
-                "\"INQUIRER_ID\" TEXT," + // 17: inquirerId
-                "\"INQUIRER_NAME\" TEXT," + // 18: inquirerName
-                "\"INQUIRER_TIME\" TEXT);"); // 19: inquirerTime
+                "\"belongTo\" TEXT," + // 1: belongTo
+                "\"area\" TEXT," + // 2: area
+                "\"address\" TEXT," + // 3: address
+                "\"longitude\" REAL NOT NULL ," + // 4: longitude
+                "\"latitude\" REAL NOT NULL ," + // 5: latitude
+                "\"type\" TEXT," + // 6: type
+                "\"struct\" TEXT," + // 7: struct
+                "\"levels\" TEXT," + // 8: levels
+                "\"acreage\" REAL NOT NULL ," + // 9: acreage
+                "\"count\" INTEGER NOT NULL ," + // 10: count
+                "\"per\" REAL NOT NULL ," + // 11: per
+                "\"total\" REAL NOT NULL ," + // 12: total
+                "\"description\" TEXT," + // 13: description
+                "\"isUpload\" INTEGER NOT NULL ," + // 14: isUpload
+                "\"State\" INTEGER NOT NULL ," + // 15: State
+                "\"EventHeadId\" TEXT," + // 16: EventHeadId
+                "\"inquirerId\" TEXT," + // 17: inquirerId
+                "\"inquirerName\" TEXT," + // 18: inquirerName
+                "\"inquirerTime\" TEXT);"); // 19: inquirerTime
     }
 
     /** Drops the underlying database table. */

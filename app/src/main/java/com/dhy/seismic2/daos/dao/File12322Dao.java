@@ -24,10 +24,10 @@ public class File12322Dao extends AbstractDao<File12322, String> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, String.class, "Id", true, "ID");
-        public final static Property FilePath = new Property(1, String.class, "FilePath", false, "FILE_PATH");
-        public final static Property ResCode = new Property(2, String.class, "ResCode", false, "RES_CODE");
-        public final static Property ResName = new Property(3, String.class, "ResName", false, "RES_NAME");
+        public final static Property Id = new Property(0, String.class, "Id", true, "Id");
+        public final static Property FilePath = new Property(1, String.class, "FilePath", false, "FilePath");
+        public final static Property ResCode = new Property(2, String.class, "ResCode", false, "ResCode");
+        public final static Property ResName = new Property(3, String.class, "ResName", false, "ResName");
     }
 
 
@@ -43,10 +43,10 @@ public class File12322Dao extends AbstractDao<File12322, String> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"Files12322\" (" + //
-                "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
-                "\"FILE_PATH\" TEXT," + // 1: FilePath
-                "\"RES_CODE\" TEXT," + // 2: ResCode
-                "\"RES_NAME\" TEXT);"); // 3: ResName
+                "\"Id\" TEXT PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"FilePath\" TEXT," + // 1: FilePath
+                "\"ResCode\" TEXT," + // 2: ResCode
+                "\"ResName\" TEXT);"); // 3: ResName
     }
 
     /** Drops the underlying database table. */

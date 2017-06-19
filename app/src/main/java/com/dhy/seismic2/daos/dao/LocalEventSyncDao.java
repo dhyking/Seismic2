@@ -24,9 +24,9 @@ public class LocalEventSyncDao extends AbstractDao<LocalEventSync, Integer> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, int.class, "Id", true, "ID");
-        public final static Property EventId = new Property(1, String.class, "EventId", false, "EVENT_ID");
-        public final static Property PrevSyncId = new Property(2, int.class, "PrevSyncId", false, "PREV_SYNC_ID");
+        public final static Property Id = new Property(0, int.class, "Id", true, "Id");
+        public final static Property EventId = new Property(1, String.class, "EventId", false, "EventId");
+        public final static Property PrevSyncId = new Property(2, int.class, "PrevSyncId", false, "PrevSyncId");
     }
 
 
@@ -42,9 +42,9 @@ public class LocalEventSyncDao extends AbstractDao<LocalEventSync, Integer> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"LocalEventSync\" (" + //
-                "\"ID\" INTEGER PRIMARY KEY NOT NULL ," + // 0: Id
-                "\"EVENT_ID\" TEXT," + // 1: EventId
-                "\"PREV_SYNC_ID\" INTEGER NOT NULL );"); // 2: PrevSyncId
+                "\"Id\" INTEGER PRIMARY KEY NOT NULL ," + // 0: Id
+                "\"EventId\" TEXT," + // 1: EventId
+                "\"PrevSyncId\" INTEGER NOT NULL );"); // 2: PrevSyncId
     }
 
     /** Drops the underlying database table. */

@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -10,12 +11,17 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity(nameInDb = "PersonLocation")
 public class PersonLocation {
     @Id
+    @Property(nameInDb = "Id")
     private String Id;
+    @Property(nameInDb = "UserId")
     private String UserId;
+    @Property(nameInDb = "CreatedTime")
     private String CreatedTime;
+    @Property(nameInDb = "Address")
     private String Address;
     private double X;
     private double Y;
+    @Property(nameInDb = "EventHeadId")
     private String EventHeadId;
     @Generated(hash = 524449695)
     public PersonLocation(String Id, String UserId, String CreatedTime,

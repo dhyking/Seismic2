@@ -25,44 +25,44 @@ public class HouseGroupModelDao extends AbstractDao<HouseGroupModel, String> {
      */
     public static class Properties {
         public final static Property ID = new Property(0, String.class, "ID", true, "ID");
-        public final static Property BelongTo = new Property(1, String.class, "belongTo", false, "BELONG_TO");
-        public final static Property Type = new Property(2, int.class, "type", false, "TYPE");
-        public final static Property SteelDestroy = new Property(3, double.class, "steelDestroy", false, "STEEL_DESTROY");
-        public final static Property SteelSeriousDamage = new Property(4, double.class, "steelSeriousDamage", false, "STEEL_SERIOUS_DAMAGE");
-        public final static Property SteelDamage = new Property(5, double.class, "steelDamage", false, "STEEL_DAMAGE");
-        public final static Property SteelSlightDamage = new Property(6, double.class, "steelSlightDamage", false, "STEEL_SLIGHT_DAMAGE");
-        public final static Property SteelBasicGood = new Property(7, double.class, "steelBasicGood", false, "STEEL_BASIC_GOOD");
-        public final static Property DefensiveBrickDestroy = new Property(8, double.class, "defensiveBrickDestroy", false, "DEFENSIVE_BRICK_DESTROY");
-        public final static Property DefensiveBrickSeriousDamage = new Property(9, double.class, "defensiveBrickSeriousDamage", false, "DEFENSIVE_BRICK_SERIOUS_DAMAGE");
-        public final static Property DefensiveBrickDamage = new Property(10, double.class, "defensiveBrickDamage", false, "DEFENSIVE_BRICK_DAMAGE");
-        public final static Property DefensiveBrickSlightDamage = new Property(11, double.class, "defensiveBrickSlightDamage", false, "DEFENSIVE_BRICK_SLIGHT_DAMAGE");
-        public final static Property DefensiveBrickBasicGood = new Property(12, double.class, "defensiveBrickBasicGood", false, "DEFENSIVE_BRICK_BASIC_GOOD");
-        public final static Property BrickDestroy = new Property(13, double.class, "brickDestroy", false, "BRICK_DESTROY");
-        public final static Property BrickSeriousDamage = new Property(14, double.class, "brickSeriousDamage", false, "BRICK_SERIOUS_DAMAGE");
-        public final static Property BrickDamage = new Property(15, double.class, "brickDamage", false, "BRICK_DAMAGE");
-        public final static Property BrickSlightDamage = new Property(16, double.class, "brickSlightDamage", false, "BRICK_SLIGHT_DAMAGE");
-        public final static Property BrickBasicGood = new Property(17, double.class, "brickBasicGood", false, "BRICK_BASIC_GOOD");
-        public final static Property StockDestroy = new Property(18, double.class, "stockDestroy", false, "STOCK_DESTROY");
-        public final static Property StockSeriousDamage = new Property(19, double.class, "stockSeriousDamage", false, "STOCK_SERIOUS_DAMAGE");
-        public final static Property StockDamage = new Property(20, double.class, "stockDamage", false, "STOCK_DAMAGE");
-        public final static Property StockSlightDamage = new Property(21, double.class, "stockSlightDamage", false, "STOCK_SLIGHT_DAMAGE");
-        public final static Property StockBasicGood = new Property(22, double.class, "stockBasicGood", false, "STOCK_BASIC_GOOD");
-        public final static Property CivilDestroy = new Property(23, double.class, "civilDestroy", false, "CIVIL_DESTROY");
-        public final static Property CivilSeriousDamage = new Property(24, double.class, "civilSeriousDamage", false, "CIVIL_SERIOUS_DAMAGE");
-        public final static Property CivilDamage = new Property(25, double.class, "civilDamage", false, "CIVIL_DAMAGE");
-        public final static Property CivilSlightDamage = new Property(26, double.class, "civilSlightDamage", false, "CIVIL_SLIGHT_DAMAGE");
-        public final static Property CivilBasicGood = new Property(27, double.class, "civilBasicGood", false, "CIVIL_BASIC_GOOD");
-        public final static Property OtherDestroy = new Property(28, double.class, "otherDestroy", false, "OTHER_DESTROY");
-        public final static Property OtherSeriousDamage = new Property(29, double.class, "otherSeriousDamage", false, "OTHER_SERIOUS_DAMAGE");
-        public final static Property OtherDamage = new Property(30, double.class, "otherDamage", false, "OTHER_DAMAGE");
-        public final static Property OtherSlightDamage = new Property(31, double.class, "otherSlightDamage", false, "OTHER_SLIGHT_DAMAGE");
-        public final static Property OtherBasicGood = new Property(32, double.class, "otherBasicGood", false, "OTHER_BASIC_GOOD");
-        public final static Property IsUpload = new Property(33, int.class, "isUpload", false, "IS_UPLOAD");
-        public final static Property State = new Property(34, int.class, "State", false, "STATE");
+        public final static Property BelongTo = new Property(1, String.class, "belongTo", false, "belongTo");
+        public final static Property Type = new Property(2, int.class, "type", false, "type");
+        public final static Property SteelDestroy = new Property(3, double.class, "steelDestroy", false, "steelDestroy");
+        public final static Property SteelSeriousDamage = new Property(4, double.class, "steelSeriousDamage", false, "steelSeriousDamage");
+        public final static Property SteelDamage = new Property(5, double.class, "steelDamage", false, "steelDamage");
+        public final static Property SteelSlightDamage = new Property(6, double.class, "steelSlightDamage", false, "steelSlightDamage");
+        public final static Property SteelBasicGood = new Property(7, double.class, "steelBasicGood", false, "steelBasicGood");
+        public final static Property DefensiveBrickDestroy = new Property(8, double.class, "defensiveBrickDestroy", false, "defensiveBrickDestroy");
+        public final static Property DefensiveBrickSeriousDamage = new Property(9, double.class, "defensiveBrickSeriousDamage", false, "defensiveBrickSeriousDamage");
+        public final static Property DefensiveBrickDamage = new Property(10, double.class, "defensiveBrickDamage", false, "defensiveBrickDamage");
+        public final static Property DefensiveBrickSlightDamage = new Property(11, double.class, "defensiveBrickSlightDamage", false, "defensiveBrickSlightDamage");
+        public final static Property DefensiveBrickBasicGood = new Property(12, double.class, "defensiveBrickBasicGood", false, "defensiveBrickBasicGood");
+        public final static Property BrickDestroy = new Property(13, double.class, "brickDestroy", false, "brickDestroy");
+        public final static Property BrickSeriousDamage = new Property(14, double.class, "brickSeriousDamage", false, "brickSeriousDamage");
+        public final static Property BrickDamage = new Property(15, double.class, "brickDamage", false, "brickDamage");
+        public final static Property BrickSlightDamage = new Property(16, double.class, "brickSlightDamage", false, "brickSlightDamage");
+        public final static Property BrickBasicGood = new Property(17, double.class, "brickBasicGood", false, "brickBasicGood");
+        public final static Property StockDestroy = new Property(18, double.class, "stockDestroy", false, "stockDestroy");
+        public final static Property StockSeriousDamage = new Property(19, double.class, "stockSeriousDamage", false, "stockSeriousDamage");
+        public final static Property StockDamage = new Property(20, double.class, "stockDamage", false, "stockDamage");
+        public final static Property StockSlightDamage = new Property(21, double.class, "stockSlightDamage", false, "stockSlightDamage");
+        public final static Property StockBasicGood = new Property(22, double.class, "stockBasicGood", false, "stockBasicGood");
+        public final static Property CivilDestroy = new Property(23, double.class, "civilDestroy", false, "civilDestroy");
+        public final static Property CivilSeriousDamage = new Property(24, double.class, "civilSeriousDamage", false, "civilSeriousDamage");
+        public final static Property CivilDamage = new Property(25, double.class, "civilDamage", false, "civilDamage");
+        public final static Property CivilSlightDamage = new Property(26, double.class, "civilSlightDamage", false, "civilSlightDamage");
+        public final static Property CivilBasicGood = new Property(27, double.class, "civilBasicGood", false, "civilBasicGood");
+        public final static Property OtherDestroy = new Property(28, double.class, "otherDestroy", false, "otherDestroy");
+        public final static Property OtherSeriousDamage = new Property(29, double.class, "otherSeriousDamage", false, "otherSeriousDamage");
+        public final static Property OtherDamage = new Property(30, double.class, "otherDamage", false, "otherDamage");
+        public final static Property OtherSlightDamage = new Property(31, double.class, "otherSlightDamage", false, "otherSlightDamage");
+        public final static Property OtherBasicGood = new Property(32, double.class, "otherBasicGood", false, "otherBasicGood");
+        public final static Property IsUpload = new Property(33, int.class, "isUpload", false, "isUpload");
+        public final static Property State = new Property(34, int.class, "State", false, "State");
         public final static Property INQUIRERID = new Property(35, String.class, "INQUIRERID", false, "INQUIRERID");
         public final static Property INQUIRERNAME = new Property(36, String.class, "INQUIRERNAME", false, "INQUIRERNAME");
         public final static Property INQUIRERTIME = new Property(37, String.class, "INQUIRERTIME", false, "INQUIRERTIME");
-        public final static Property EventHeadId = new Property(38, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
+        public final static Property EventHeadId = new Property(38, String.class, "EventHeadId", false, "EventHeadId");
     }
 
 
@@ -79,44 +79,44 @@ public class HouseGroupModelDao extends AbstractDao<HouseGroupModel, String> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"HouseGroup\" (" + //
                 "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: ID
-                "\"BELONG_TO\" TEXT," + // 1: belongTo
-                "\"TYPE\" INTEGER NOT NULL ," + // 2: type
-                "\"STEEL_DESTROY\" REAL NOT NULL ," + // 3: steelDestroy
-                "\"STEEL_SERIOUS_DAMAGE\" REAL NOT NULL ," + // 4: steelSeriousDamage
-                "\"STEEL_DAMAGE\" REAL NOT NULL ," + // 5: steelDamage
-                "\"STEEL_SLIGHT_DAMAGE\" REAL NOT NULL ," + // 6: steelSlightDamage
-                "\"STEEL_BASIC_GOOD\" REAL NOT NULL ," + // 7: steelBasicGood
-                "\"DEFENSIVE_BRICK_DESTROY\" REAL NOT NULL ," + // 8: defensiveBrickDestroy
-                "\"DEFENSIVE_BRICK_SERIOUS_DAMAGE\" REAL NOT NULL ," + // 9: defensiveBrickSeriousDamage
-                "\"DEFENSIVE_BRICK_DAMAGE\" REAL NOT NULL ," + // 10: defensiveBrickDamage
-                "\"DEFENSIVE_BRICK_SLIGHT_DAMAGE\" REAL NOT NULL ," + // 11: defensiveBrickSlightDamage
-                "\"DEFENSIVE_BRICK_BASIC_GOOD\" REAL NOT NULL ," + // 12: defensiveBrickBasicGood
-                "\"BRICK_DESTROY\" REAL NOT NULL ," + // 13: brickDestroy
-                "\"BRICK_SERIOUS_DAMAGE\" REAL NOT NULL ," + // 14: brickSeriousDamage
-                "\"BRICK_DAMAGE\" REAL NOT NULL ," + // 15: brickDamage
-                "\"BRICK_SLIGHT_DAMAGE\" REAL NOT NULL ," + // 16: brickSlightDamage
-                "\"BRICK_BASIC_GOOD\" REAL NOT NULL ," + // 17: brickBasicGood
-                "\"STOCK_DESTROY\" REAL NOT NULL ," + // 18: stockDestroy
-                "\"STOCK_SERIOUS_DAMAGE\" REAL NOT NULL ," + // 19: stockSeriousDamage
-                "\"STOCK_DAMAGE\" REAL NOT NULL ," + // 20: stockDamage
-                "\"STOCK_SLIGHT_DAMAGE\" REAL NOT NULL ," + // 21: stockSlightDamage
-                "\"STOCK_BASIC_GOOD\" REAL NOT NULL ," + // 22: stockBasicGood
-                "\"CIVIL_DESTROY\" REAL NOT NULL ," + // 23: civilDestroy
-                "\"CIVIL_SERIOUS_DAMAGE\" REAL NOT NULL ," + // 24: civilSeriousDamage
-                "\"CIVIL_DAMAGE\" REAL NOT NULL ," + // 25: civilDamage
-                "\"CIVIL_SLIGHT_DAMAGE\" REAL NOT NULL ," + // 26: civilSlightDamage
-                "\"CIVIL_BASIC_GOOD\" REAL NOT NULL ," + // 27: civilBasicGood
-                "\"OTHER_DESTROY\" REAL NOT NULL ," + // 28: otherDestroy
-                "\"OTHER_SERIOUS_DAMAGE\" REAL NOT NULL ," + // 29: otherSeriousDamage
-                "\"OTHER_DAMAGE\" REAL NOT NULL ," + // 30: otherDamage
-                "\"OTHER_SLIGHT_DAMAGE\" REAL NOT NULL ," + // 31: otherSlightDamage
-                "\"OTHER_BASIC_GOOD\" REAL NOT NULL ," + // 32: otherBasicGood
-                "\"IS_UPLOAD\" INTEGER NOT NULL ," + // 33: isUpload
-                "\"STATE\" INTEGER NOT NULL ," + // 34: State
+                "\"belongTo\" TEXT," + // 1: belongTo
+                "\"type\" INTEGER NOT NULL ," + // 2: type
+                "\"steelDestroy\" REAL NOT NULL ," + // 3: steelDestroy
+                "\"steelSeriousDamage\" REAL NOT NULL ," + // 4: steelSeriousDamage
+                "\"steelDamage\" REAL NOT NULL ," + // 5: steelDamage
+                "\"steelSlightDamage\" REAL NOT NULL ," + // 6: steelSlightDamage
+                "\"steelBasicGood\" REAL NOT NULL ," + // 7: steelBasicGood
+                "\"defensiveBrickDestroy\" REAL NOT NULL ," + // 8: defensiveBrickDestroy
+                "\"defensiveBrickSeriousDamage\" REAL NOT NULL ," + // 9: defensiveBrickSeriousDamage
+                "\"defensiveBrickDamage\" REAL NOT NULL ," + // 10: defensiveBrickDamage
+                "\"defensiveBrickSlightDamage\" REAL NOT NULL ," + // 11: defensiveBrickSlightDamage
+                "\"defensiveBrickBasicGood\" REAL NOT NULL ," + // 12: defensiveBrickBasicGood
+                "\"brickDestroy\" REAL NOT NULL ," + // 13: brickDestroy
+                "\"brickSeriousDamage\" REAL NOT NULL ," + // 14: brickSeriousDamage
+                "\"brickDamage\" REAL NOT NULL ," + // 15: brickDamage
+                "\"brickSlightDamage\" REAL NOT NULL ," + // 16: brickSlightDamage
+                "\"brickBasicGood\" REAL NOT NULL ," + // 17: brickBasicGood
+                "\"stockDestroy\" REAL NOT NULL ," + // 18: stockDestroy
+                "\"stockSeriousDamage\" REAL NOT NULL ," + // 19: stockSeriousDamage
+                "\"stockDamage\" REAL NOT NULL ," + // 20: stockDamage
+                "\"stockSlightDamage\" REAL NOT NULL ," + // 21: stockSlightDamage
+                "\"stockBasicGood\" REAL NOT NULL ," + // 22: stockBasicGood
+                "\"civilDestroy\" REAL NOT NULL ," + // 23: civilDestroy
+                "\"civilSeriousDamage\" REAL NOT NULL ," + // 24: civilSeriousDamage
+                "\"civilDamage\" REAL NOT NULL ," + // 25: civilDamage
+                "\"civilSlightDamage\" REAL NOT NULL ," + // 26: civilSlightDamage
+                "\"civilBasicGood\" REAL NOT NULL ," + // 27: civilBasicGood
+                "\"otherDestroy\" REAL NOT NULL ," + // 28: otherDestroy
+                "\"otherSeriousDamage\" REAL NOT NULL ," + // 29: otherSeriousDamage
+                "\"otherDamage\" REAL NOT NULL ," + // 30: otherDamage
+                "\"otherSlightDamage\" REAL NOT NULL ," + // 31: otherSlightDamage
+                "\"otherBasicGood\" REAL NOT NULL ," + // 32: otherBasicGood
+                "\"isUpload\" INTEGER NOT NULL ," + // 33: isUpload
+                "\"State\" INTEGER NOT NULL ," + // 34: State
                 "\"INQUIRERID\" TEXT," + // 35: INQUIRERID
                 "\"INQUIRERNAME\" TEXT," + // 36: INQUIRERNAME
                 "\"INQUIRERTIME\" TEXT," + // 37: INQUIRERTIME
-                "\"EVENT_HEAD_ID\" TEXT);"); // 38: EventHeadId
+                "\"EventHeadId\" TEXT);"); // 38: EventHeadId
     }
 
     /** Drops the underlying database table. */

@@ -25,16 +25,16 @@ public class FastCollectModelDao extends AbstractDao<FastCollectModel, String> {
      */
     public static class Properties {
         public final static Property ID = new Property(0, String.class, "ID", true, "ID");
-        public final static Property Longitude = new Property(1, double.class, "Longitude", false, "LONGITUDE");
-        public final static Property Latitude = new Property(2, double.class, "Latitude", false, "LATITUDE");
-        public final static Property Address = new Property(3, String.class, "Address", false, "ADDRESS");
-        public final static Property CreatorId = new Property(4, String.class, "CreatorId", false, "CREATOR_ID");
-        public final static Property CreatorName = new Property(5, String.class, "CreatorName", false, "CREATOR_NAME");
-        public final static Property CreateTime = new Property(6, String.class, "CreateTime", false, "CREATE_TIME");
-        public final static Property IsUpload = new Property(7, int.class, "IsUpload", false, "IS_UPLOAD");
-        public final static Property PublicType = new Property(8, int.class, "PublicType", false, "PUBLIC_TYPE");
-        public final static Property Description = new Property(9, String.class, "Description", false, "DESCRIPTION");
-        public final static Property EventHeadId = new Property(10, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
+        public final static Property Longitude = new Property(1, double.class, "Longitude", false, "Longitude");
+        public final static Property Latitude = new Property(2, double.class, "Latitude", false, "Latitude");
+        public final static Property Address = new Property(3, String.class, "Address", false, "Address");
+        public final static Property CreatorId = new Property(4, String.class, "CreatorId", false, "CreatorId");
+        public final static Property CreatorName = new Property(5, String.class, "CreatorName", false, "CreatorName");
+        public final static Property CreateTime = new Property(6, String.class, "CreateTime", false, "CreateTime");
+        public final static Property IsUpload = new Property(7, int.class, "IsUpload", false, "IsUpload");
+        public final static Property PublicType = new Property(8, int.class, "PublicType", false, "PublicType");
+        public final static Property Description = new Property(9, String.class, "Description", false, "Description");
+        public final static Property EventHeadId = new Property(10, String.class, "EventHeadId", false, "EventHeadId");
     }
 
 
@@ -51,16 +51,16 @@ public class FastCollectModelDao extends AbstractDao<FastCollectModel, String> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"FastCollect\" (" + //
                 "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: ID
-                "\"LONGITUDE\" REAL NOT NULL ," + // 1: Longitude
-                "\"LATITUDE\" REAL NOT NULL ," + // 2: Latitude
-                "\"ADDRESS\" TEXT," + // 3: Address
-                "\"CREATOR_ID\" TEXT," + // 4: CreatorId
-                "\"CREATOR_NAME\" TEXT," + // 5: CreatorName
-                "\"CREATE_TIME\" TEXT," + // 6: CreateTime
-                "\"IS_UPLOAD\" INTEGER NOT NULL ," + // 7: IsUpload
-                "\"PUBLIC_TYPE\" INTEGER NOT NULL ," + // 8: PublicType
-                "\"DESCRIPTION\" TEXT," + // 9: Description
-                "\"EVENT_HEAD_ID\" TEXT);"); // 10: EventHeadId
+                "\"Longitude\" REAL NOT NULL ," + // 1: Longitude
+                "\"Latitude\" REAL NOT NULL ," + // 2: Latitude
+                "\"Address\" TEXT," + // 3: Address
+                "\"CreatorId\" TEXT," + // 4: CreatorId
+                "\"CreatorName\" TEXT," + // 5: CreatorName
+                "\"CreateTime\" TEXT," + // 6: CreateTime
+                "\"IsUpload\" INTEGER NOT NULL ," + // 7: IsUpload
+                "\"PublicType\" INTEGER NOT NULL ," + // 8: PublicType
+                "\"Description\" TEXT," + // 9: Description
+                "\"EventHeadId\" TEXT);"); // 10: EventHeadId
     }
 
     /** Drops the underlying database table. */

@@ -7,6 +7,7 @@
         android:id="@+id/select_name_tv"
         style="@style/textview_content_style"
         android:layout_width="match_parent"
+        android:background="@drawable/btn_myself_color_selector"
         android:minHeight="30dp"
         android:gravity="center"
         android:padding="10dp"

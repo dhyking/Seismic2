@@ -25,20 +25,20 @@ public class BiaoZhuModelDao extends AbstractDao<BiaoZhuModel, String> {
      */
     public static class Properties {
         public final static Property ID = new Property(0, String.class, "ID", true, "ID");
-        public final static Property Name = new Property(1, String.class, "Name", false, "NAME");
-        public final static Property Longitude = new Property(2, double.class, "Longitude", false, "LONGITUDE");
-        public final static Property Latitude = new Property(3, double.class, "Latitude", false, "LATITUDE");
-        public final static Property Des = new Property(4, String.class, "Des", false, "DES");
-        public final static Property PicAddress = new Property(5, String.class, "PicAddress", false, "PIC_ADDRESS");
-        public final static Property VideoAddress = new Property(6, String.class, "VideoAddress", false, "VIDEO_ADDRESS");
-        public final static Property AudioAddress = new Property(7, String.class, "AudioAddress", false, "AUDIO_ADDRESS");
-        public final static Property BZMType = new Property(8, String.class, "BZMType", false, "BZMTYPE");
-        public final static Property CreatorId = new Property(9, String.class, "CreatorId", false, "CREATOR_ID");
-        public final static Property EventHeadId = new Property(10, String.class, "EventHeadId", false, "EVENT_HEAD_ID");
-        public final static Property CreatorName = new Property(11, String.class, "CreatorName", false, "CREATOR_NAME");
-        public final static Property CreateTime = new Property(12, String.class, "CreateTime", false, "CREATE_TIME");
-        public final static Property MissionCase = new Property(13, String.class, "MissionCase", false, "MISSION_CASE");
-        public final static Property IsUpload = new Property(14, int.class, "IsUpload", false, "IS_UPLOAD");
+        public final static Property Name = new Property(1, String.class, "Name", false, "Name");
+        public final static Property Longitude = new Property(2, double.class, "Longitude", false, "Longitude");
+        public final static Property Latitude = new Property(3, double.class, "Latitude", false, "Latitude");
+        public final static Property Des = new Property(4, String.class, "Des", false, "Des");
+        public final static Property PicAddress = new Property(5, String.class, "PicAddress", false, "PicAddress");
+        public final static Property VideoAddress = new Property(6, String.class, "VideoAddress", false, "VideoAddress");
+        public final static Property AudioAddress = new Property(7, String.class, "AudioAddress", false, "AudioAddress");
+        public final static Property BZMType = new Property(8, String.class, "BZMType", false, "BZMType");
+        public final static Property CreatorId = new Property(9, String.class, "CreatorId", false, "CreatorId");
+        public final static Property EventHeadId = new Property(10, String.class, "EventHeadId", false, "EventHeadId");
+        public final static Property CreatorName = new Property(11, String.class, "CreatorName", false, "CreatorName");
+        public final static Property CreateTime = new Property(12, String.class, "CreateTime", false, "CreateTime");
+        public final static Property MissionCase = new Property(13, String.class, "MissionCase", false, "MissionCase");
+        public final static Property IsUpload = new Property(14, int.class, "IsUpload", false, "IsUpload");
     }
 
 
@@ -55,20 +55,20 @@ public class BiaoZhuModelDao extends AbstractDao<BiaoZhuModel, String> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"BIAOZHUDIAN\" (" + //
                 "\"ID\" TEXT PRIMARY KEY NOT NULL ," + // 0: ID
-                "\"NAME\" TEXT," + // 1: Name
-                "\"LONGITUDE\" REAL NOT NULL ," + // 2: Longitude
-                "\"LATITUDE\" REAL NOT NULL ," + // 3: Latitude
-                "\"DES\" TEXT," + // 4: Des
-                "\"PIC_ADDRESS\" TEXT," + // 5: PicAddress
-                "\"VIDEO_ADDRESS\" TEXT," + // 6: VideoAddress
-                "\"AUDIO_ADDRESS\" TEXT," + // 7: AudioAddress
-                "\"BZMTYPE\" TEXT," + // 8: BZMType
-                "\"CREATOR_ID\" TEXT," + // 9: CreatorId
-                "\"EVENT_HEAD_ID\" TEXT," + // 10: EventHeadId
-                "\"CREATOR_NAME\" TEXT," + // 11: CreatorName
-                "\"CREATE_TIME\" TEXT," + // 12: CreateTime
-                "\"MISSION_CASE\" TEXT," + // 13: MissionCase
-                "\"IS_UPLOAD\" INTEGER NOT NULL );"); // 14: IsUpload
+                "\"Name\" TEXT," + // 1: Name
+                "\"Longitude\" REAL NOT NULL ," + // 2: Longitude
+                "\"Latitude\" REAL NOT NULL ," + // 3: Latitude
+                "\"Des\" TEXT," + // 4: Des
+                "\"PicAddress\" TEXT," + // 5: PicAddress
+                "\"VideoAddress\" TEXT," + // 6: VideoAddress
+                "\"AudioAddress\" TEXT," + // 7: AudioAddress
+                "\"BZMType\" TEXT," + // 8: BZMType
+                "\"CreatorId\" TEXT," + // 9: CreatorId
+                "\"EventHeadId\" TEXT," + // 10: EventHeadId
+                "\"CreatorName\" TEXT," + // 11: CreatorName
+                "\"CreateTime\" TEXT," + // 12: CreateTime
+                "\"MissionCase\" TEXT," + // 13: MissionCase
+                "\"IsUpload\" INTEGER NOT NULL );"); // 14: IsUpload
     }
 
     /** Drops the underlying database table. */

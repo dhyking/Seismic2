@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -10,8 +11,11 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity(nameInDb = "LocalEventSync")
 public class LocalEventSync {
     @Id
+    @Property(nameInDb = "Id")
     private int Id;
+    @Property(nameInDb = "EventId")
     private String EventId;
+    @Property(nameInDb = "PrevSyncId")
     private int PrevSyncId;
     @Generated(hash = 1442571790)
     public LocalEventSync(int Id, String EventId, int PrevSyncId) {

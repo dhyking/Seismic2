@@ -7,6 +7,7 @@ import org.greenrobot.greendao.annotation.Id;
 
 import java.io.Serializable;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -15,37 +16,50 @@ import org.greenrobot.greendao.annotation.Generated;
 public class SurveyPointModel {
     @Id
     private String ID;
+    @Property(nameInDb = "area")
     private String area;
+    @Property(nameInDb = "address")
     private String address;
+    @Property(nameInDb = "longitude")
     private double longitude;
+    @Property(nameInDb = "latitude")
     private double latitude;
+    @Property(nameInDb = "levels")
     private String levels;
+    @Property(nameInDb = "description")
     private String description;
+    @Property(nameInDb = "belongTo")
     private String belongTo;
+    @Property(nameInDb = "isUpload")
     private int isUpload;
+    @Property(nameInDb = "State")
     private int State;
+    @Property(nameInDb = "createTime")
     private String createTime;
+    @Property(nameInDb = "creatorId")
     private String creatorId;
+    @Property(nameInDb = "creatorName")
     private String creatorName;
+    @Property(nameInDb = "EventHeadId")
     private String EventHeadId;
-//    public SurveyPointModel(Cursor cursor) {
-//        for (int i = 0; i < cursor.getColumnCount(); i++) {
-//            if ("ID".equals(cursor.getColumnName(i))) this.ID = cursor.getString(i);
-//            if ("area".equals(cursor.getColumnName(i))) this.area = cursor.getString(i);
-//            if ("address".equals(cursor.getColumnName(i))) this.address = cursor.getString(i);
-//            if ("longitude".equals(cursor.getColumnName(i))) this.longitude = cursor.getDouble(i);
-//            if ("latitude".equals(cursor.getColumnName(i))) this.latitude = cursor.getDouble(i);
-//            if ("levels".equals(cursor.getColumnName(i))) this.levels = cursor.getString(i);
-//            if ("description".equals(cursor.getColumnName(i))) this.description = cursor.getString(i);
-//            if ("belongTo".equals(cursor.getColumnName(i))) this.belongTo = cursor.getString(i);
-//            if ("isUpload".equals(cursor.getColumnName(i))) this.isUpload = cursor.getInt(i);
-//            if ("State".equals(cursor.getColumnName(i))) this.State = cursor.getInt(i);
-//            if("createTime".equals(cursor.getColumnName(i))) this.createTime=cursor.getString(i);
-//            if("creatorId".equals(cursor.getColumnName(i))) this.creatorId=cursor.getString(i);
-//            if("creatorName".equals(cursor.getColumnName(i))) this.creatorName=cursor.getString(i);
-//            if ("EventHeadId".equals(cursor.getColumnName(i))) this.EventHeadId= cursor.getString(i);
-//        }
-//    }
+    public SurveyPointModel(Cursor cursor) {
+        for (int i = 0; i < cursor.getColumnCount(); i++) {
+            if ("ID".equals(cursor.getColumnName(i))) this.ID = cursor.getString(i);
+            if ("area".equals(cursor.getColumnName(i))) this.area = cursor.getString(i);
+            if ("address".equals(cursor.getColumnName(i))) this.address = cursor.getString(i);
+            if ("longitude".equals(cursor.getColumnName(i))) this.longitude = cursor.getDouble(i);
+            if ("latitude".equals(cursor.getColumnName(i))) this.latitude = cursor.getDouble(i);
+            if ("levels".equals(cursor.getColumnName(i))) this.levels = cursor.getString(i);
+            if ("description".equals(cursor.getColumnName(i))) this.description = cursor.getString(i);
+            if ("belongTo".equals(cursor.getColumnName(i))) this.belongTo = cursor.getString(i);
+            if ("isUpload".equals(cursor.getColumnName(i))) this.isUpload = cursor.getInt(i);
+            if ("State".equals(cursor.getColumnName(i))) this.State = cursor.getInt(i);
+            if("createTime".equals(cursor.getColumnName(i))) this.createTime=cursor.getString(i);
+            if("creatorId".equals(cursor.getColumnName(i))) this.creatorId=cursor.getString(i);
+            if("creatorName".equals(cursor.getColumnName(i))) this.creatorName=cursor.getString(i);
+            if ("EventHeadId".equals(cursor.getColumnName(i))) this.EventHeadId= cursor.getString(i);
+        }
+    }
     @Generated(hash = 42685930)
     public SurveyPointModel(String ID, String area, String address, double longitude, double latitude,
             String levels, String description, String belongTo, int isUpload, int State,

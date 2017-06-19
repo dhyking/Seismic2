@@ -3,6 +3,7 @@ package com.dhy.seismic2.daos.bean;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by dhy on 2017/6/13.
@@ -11,43 +12,78 @@ import org.greenrobot.greendao.annotation.Generated;
 public class HouseGroupModel {
     @Id
     private String ID;
+    @Property(nameInDb = "belongTo")
     private String belongTo;
+    @Property(nameInDb = "type")
     private int type; //0按面积，1按栋数
+    @Property(nameInDb = "steelDestroy")
     private double steelDestroy;
+    @Property(nameInDb = "steelSeriousDamage")
     private double steelSeriousDamage;
+    @Property(nameInDb = "steelDamage")
     private double steelDamage;
+    @Property(nameInDb = "steelSlightDamage")
     private double steelSlightDamage;
+    @Property(nameInDb = "steelBasicGood")
     private double steelBasicGood;
+    @Property(nameInDb = "defensiveBrickDestroy")
     private double defensiveBrickDestroy;
+    @Property(nameInDb = "defensiveBrickSeriousDamage")
     private double defensiveBrickSeriousDamage;
+    @Property(nameInDb = "defensiveBrickDamage")
     private double defensiveBrickDamage;
+    @Property(nameInDb = "defensiveBrickSlightDamage")
     private double defensiveBrickSlightDamage;
+    @Property(nameInDb = "defensiveBrickBasicGood")
     private double defensiveBrickBasicGood;
+    @Property(nameInDb = "brickDestroy")
     private double brickDestroy;
+    @Property(nameInDb = "brickSeriousDamage")
     private double brickSeriousDamage;
+    @Property(nameInDb = "brickDamage")
     private double brickDamage;
+    @Property(nameInDb = "brickSlightDamage")
     private double brickSlightDamage;
+    @Property(nameInDb = "brickBasicGood")
     private double brickBasicGood;
+    @Property(nameInDb = "stockDestroy")
     private double stockDestroy;
+    @Property(nameInDb = "stockSeriousDamage")
     private double stockSeriousDamage;
+    @Property(nameInDb = "stockDamage")
     private double stockDamage;
+    @Property(nameInDb = "stockSlightDamage")
     private double stockSlightDamage;
+    @Property(nameInDb = "stockBasicGood")
     private double stockBasicGood;
+    @Property(nameInDb = "civilDestroy")
     private double civilDestroy;
+    @Property(nameInDb = "civilSeriousDamage")
     private double civilSeriousDamage;
+    @Property(nameInDb = "civilDamage")
     private double civilDamage;
+    @Property(nameInDb = "civilSlightDamage")
     private double civilSlightDamage;
+    @Property(nameInDb = "civilBasicGood")
     private double civilBasicGood;
+    @Property(nameInDb = "otherDestroy")
     private double otherDestroy;
+    @Property(nameInDb = "otherSeriousDamage")
     private double otherSeriousDamage;
+    @Property(nameInDb = "otherDamage")
     private double otherDamage;
+    @Property(nameInDb = "otherSlightDamage")
     private double otherSlightDamage;
+    @Property(nameInDb = "otherBasicGood")
     private double otherBasicGood;
+    @Property(nameInDb = "isUpload")
     private int isUpload;
+    @Property(nameInDb = "State")
     private int State;
     private String INQUIRERID;
     private String INQUIRERNAME;
     private String INQUIRERTIME;
+    @Property(nameInDb = "EventHeadId")
     private String EventHeadId;
     @Generated(hash = 1486872768)
     public HouseGroupModel(String ID, String belongTo, int type,
